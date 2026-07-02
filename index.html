@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interactive professional profile for Darcy Awah Achunguh, Business Analyst, Data Analyst, Data Engineer, and Data Scientist." />
+  <title>Darcy Awah Achunguh | Interactive Data Profile</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0d1b2f;
+      --card: rgba(255, 255, 255, 0.08);
+      --card-solid: #10233b;
+      --text: #f6f9ff;
+      --muted: #aebed1;
+      --line: rgba(255,255,255,0.16);
+      --brand: #46d5c8;
+      --brand-2: #8a7dff;
+      --brand-3: #ffcf6d;
+      --danger: #ff7a90;
+      --shadow: 0 24px 70px rgba(0,0,0,0.35);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    [data-theme="light"] {
+      --bg: #f5f7fb;
+      --bg-soft: #ffffff;
+      --card: rgba(7, 17, 31, 0.06);
+      --card-solid: #ffffff;
+      --text: #102033;
+      --muted: #5f6f85;
+      --line: rgba(16,32,51,0.14);
+      --brand: #0f9f95;
+      --brand-2: #5f55d9;
+      --brand-3: #d08a00;
+      --danger: #cc3152;
+      --shadow: 0 24px 70px rgba(7,17,31,0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(70,213,200,0.18), transparent 34%),
+        radial-gradient(circle at top right, rgba(138,125,255,0.20), transparent 36%),
+        linear-gradient(135deg, var(--bg), var(--bg-soft));
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.55), transparent 75%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input {
+      font-family: inherit;
+    }
+
+    .shell {
+      width: min(var(--max), calc(100% - 34px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(18px);
+      background: color-mix(in srgb, var(--bg) 70%, transparent);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      width: min(var(--max), calc(100% - 34px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 16px;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .monogram {
+      width: 42px;
+      height: 42px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #fff;
+      box-shadow: 0 15px 45px rgba(70,213,200,0.25);
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a, .ghost-btn {
+      border: 1px solid transparent;
+      color: var(--muted);
+      padding: 10px 12px;
+      border-radius: 999px;
+      transition: 0.2s ease;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .nav-links a:hover, .ghost-btn:hover {
+      color: var(--text);
+      border-color: var(--line);
+      background: var(--card);
+    }
+
+    .hero {
+      padding: 82px 0 42px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: var(--card);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--brand);
+      box-shadow: 0 0 0 8px rgba(70, 213, 200, 0.14);
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 82px);
+      line-height: 0.92;
+      letter-spacing: -0.08em;
+      margin: 24px 0 18px;
+      max-width: 850px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--brand), var(--brand-2), var(--brand-3));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.7;
+      max-width: 780px;
+      margin: 0 0 28px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      cursor: pointer;
+      color: var(--text);
+      font-weight: 800;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      background: var(--card);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .btn.primary {
+      color: #06111f;
+      background: linear-gradient(135deg, var(--brand), #a7fff6);
+      border-color: transparent;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      background:
+        linear-gradient(160deg, rgba(255,255,255,0.16), rgba(255,255,255,0.04)),
+        var(--card);
+      box-shadow: var(--shadow);
+      min-height: 540px;
+      padding: 28px;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -100px;
+      top: -90px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(70,213,200,0.5), transparent 66%);
+      filter: blur(8px);
+    }
+
+    .profile-orb {
+      position: relative;
+      height: 240px;
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+    }
+
+    .orb-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      animation: spin 14s linear infinite;
+    }
+
+    .orb-ring.one { width: 210px; height: 210px; }
+    .orb-ring.two { width: 280px; height: 112px; transform: rotate(18deg); animation-duration: 18s; }
+    .orb-ring.three { width: 120px; height: 280px; transform: rotate(-25deg); animation-duration: 22s; }
+
+    @keyframes spin {
+      from { rotate: 0deg; }
+      to { rotate: 360deg; }
+    }
+
+    .avatar {
+      position: relative;
+      z-index: 2;
+      width: 154px;
+      height: 154px;
+      display: grid;
+      place-items: center;
+      border-radius: 44px;
+      font-size: 52px;
+      font-weight: 1000;
+      letter-spacing: -0.08em;
+      background:
+        linear-gradient(135deg, rgba(70,213,200,0.95), rgba(138,125,255,0.95)),
+        #16243b;
+      color: #fff;
+      box-shadow: 0 28px 90px rgba(70,213,200,0.24);
+    }
+
+    .floating-chip {
+      position: absolute;
+      z-index: 4;
+      background: color-mix(in srgb, var(--card-solid) 92%, transparent);
+      border: 1px solid var(--line);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 10px 13px;
+      box-shadow: var(--shadow);
+      font-weight: 800;
+      font-size: 12px;
+    }
+
+    .chip-a { left: 16px; top: 54px; }
+    .chip-b { right: 4px; top: 132px; }
+    .chip-c { left: 46px; bottom: 36px; }
+
+    .info-stack {
+      position: relative;
+      display: grid;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--line);
+    }
+
+    .info-icon {
+      width: 38px;
+      height: 38px;
+      flex: 0 0 38px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(70,213,200,0.13);
+      color: var(--brand);
+    }
+
+    .info-row strong {
+      display: block;
+      margin-bottom: 3px;
+      letter-spacing: -0.02em;
+    }
+
+    .info-row span, .info-row a {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+      word-break: break-word;
+    }
+
+    .section {
+      padding: 54px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .section h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.03;
+      letter-spacing: -0.06em;
+      margin: 0;
+    }
+
+    .section-note {
+      max-width: 560px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+      padding: 22px;
+      min-height: 132px;
+      box-shadow: 0 10px 50px rgba(0,0,0,0.08);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 38px;
+      letter-spacing: -0.06em;
+      margin-bottom: 8px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .visual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+      padding: 22px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+      overflow: hidden;
+    }
+
+    .panel h3 {
+      margin: 0 0 6px;
+      font-size: 21px;
+      letter-spacing: -0.03em;
+    }
+
+    .panel p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    canvas {
+      width: 100%;
+      max-width: 100%;
+      display: block;
+    }
+
+    #radarCanvas {
+      min-height: 355px;
+    }
+
+    #barsCanvas {
+      min-height: 355px;
+    }
+
+    .skill-cloud {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .skill-chip {
+      border: 1px solid var(--line);
+      color: var(--muted);
+      padding: 9px 11px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      font-weight: 700;
+      font-size: 13px;
+      transition: 0.2s ease;
+    }
+
+    .skill-chip:hover {
+      color: var(--text);
+      transform: translateY(-2px);
+      border-color: color-mix(in srgb, var(--brand) 60%, var(--line));
+    }
+
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(var(--brand), var(--brand-2));
+      border-radius: 999px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin: 0 0 14px;
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -16px;
+      top: 23px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--brand);
+      box-shadow: 0 0 0 6px rgba(70,213,200,0.14);
+    }
+
+    .timeline-item:hover, .timeline-item.active {
+      transform: translateX(4px);
+      border-color: color-mix(in srgb, var(--brand) 55%, var(--line));
+      background: color-mix(in srgb, var(--card) 75%, var(--brand) 12%);
+    }
+
+    .timeline-item small {
+      color: var(--brand);
+      font-weight: 900;
+    }
+
+    .timeline-item h3 {
+      margin: 5px 0 6px;
+      letter-spacing: -0.03em;
+    }
+
+    .timeline-item p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .role-card {
+      min-height: 438px;
+    }
+
+    .role-label {
+      display: inline-flex;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(70,213,200,0.13);
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .role-card h3 {
+      font-size: 28px;
+      margin: 0 0 10px;
+      letter-spacing: -0.05em;
+    }
+
+    .role-card ul {
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin: 18px 0 0;
+    }
+
+    .role-card li {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .role-card li::before {
+      content: "✓";
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 10px;
+      background: rgba(70,213,200,0.13);
+      color: var(--brand);
+      font-weight: 900;
+      margin-top: 1px;
+    }
+
+    .filter-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .filter-btn {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--card);
+      color: var(--muted);
+      padding: 10px 13px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      color: #07111f;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--brand), #b8fff7);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .project-card {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 22px;
+      min-height: 265px;
+      display: flex;
+      flex-direction: column;
+      transition: opacity .25s ease, transform .25s ease, border-color .25s ease;
+    }
+
+    .project-card.hide {
+      opacity: 0.16;
+      transform: scale(0.98);
+      pointer-events: none;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: color-mix(in srgb, var(--brand) 60%, var(--line));
+    }
+
+    .project-card .tag {
+      align-self: flex-start;
+      margin-bottom: 14px;
+      font-weight: 900;
+      font-size: 12px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      color: var(--brand);
+      background: rgba(70,213,200,0.12);
+    }
+
+    .project-card h3 {
+      margin: 0 0 9px;
+      font-size: 22px;
+      letter-spacing: -0.04em;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0 0 16px;
+    }
+
+    .tech-list {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tech-list span {
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      padding: 7px 9px;
+      border-radius: 999px;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .education-card {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .education-card::before {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      right: -50px;
+      top: -50px;
+      background: radial-gradient(circle, rgba(138,125,255,0.35), transparent 68%);
+      border-radius: 50%;
+    }
+
+    .education-card small {
+      color: var(--brand);
+      font-weight: 900;
+    }
+
+    .education-card h3 {
+      margin: 10px 0 8px;
+      letter-spacing: -0.04em;
+    }
+
+    .education-card p {
+      color: var(--muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .contact-card {
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      padding: 34px;
+      background:
+        linear-gradient(135deg, rgba(70,213,200,0.17), rgba(138,125,255,0.15)),
+        var(--card);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card h2 {
+      margin-bottom: 12px;
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 26px 0 42px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%) translateY(120px);
+      opacity: 0;
+      border-radius: 999px;
+      padding: 12px 16px;
+      background: var(--card-solid);
+      color: var(--text);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      transition: 0.3s ease;
+      z-index: 50;
+      font-weight: 800;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .scroll-reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid, .visual-grid, .experience-layout, .contact-card {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics, .education-grid, .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-card {
+        min-height: auto;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-inner {
+        align-items: flex-start;
+        padding: 12px 0;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .metrics, .education-grid, .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .contact-card {
+        padding: 24px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    @media print {
+      .nav, .actions, .filter-row, .toast, .ghost-btn {
+        display: none !important;
+      }
+
+      body {
+        background: #fff;
+        color: #111;
+      }
+
+      .panel, .metric, .project-card, .education-card, .hero-card, .contact-card, .timeline-item {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand-mark" href="#top" aria-label="Darcy Awah profile home">
+        <span class="monogram">DA</span>
+        <span>Darcy Awah</span>
+      </a>
+      <div class="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <button class="ghost-btn" id="themeToggle" type="button" aria-label="Toggle light or dark theme">☾ Theme</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-grid">
+        <div class="scroll-reveal">
+          <span class="eyebrow"><span class="pulse"></span> Business Analyst • Data Analyst • Data Engineer • Data Scientist</span>
+          <h1>Turning business problems into <span class="gradient-text">data-driven solutions.</span></h1>
+          <p class="lead">
+            I combine business analysis, data engineering, analytics, and machine learning to translate complex needs into clear requirements, reliable datasets, insightful dashboards, and practical predictive solutions.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="mailto:awahdarcy@gmail.com">Contact Me</a>
+            <a class="btn" href="https://www.linkedin.com/in/darcy-awah-achunguh-85a83331b/" target="_blank" rel="noopener">LinkedIn Profile</a>
+            <button class="btn" type="button" id="printProfile">Print / Save PDF</button>
+          </div>
+
+          <div class="metrics" aria-label="Profile highlights">
+            <div class="metric">
+              <strong data-count="4">0</strong>
+              <span>Data-focused roles represented in experience</span>
+            </div>
+            <div class="metric">
+              <strong data-count="6">0</strong>
+              <span>Core skill areas across analytics, engineering, ML, BI, cloud, and business analysis</span>
+            </div>
+            <div class="metric">
+              <strong data-count="4">0</strong>
+              <span>Portfolio projects in classification, regression, dashboards, and HR analytics</span>
+            </div>
+            <div class="metric">
+              <strong data-count="3">0</strong>
+              <span>Academic programs in Data Science, MBA, and Economics</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card scroll-reveal" aria-label="Profile contact summary">
+          <div class="profile-orb" aria-hidden="true">
+            <span class="orb-ring one"></span>
+            <span class="orb-ring two"></span>
+            <span class="orb-ring three"></span>
+            <span class="floating-chip chip-a">SQL + Python</span>
+            <span class="floating-chip chip-b">Power BI</span>
+            <span class="floating-chip chip-c">ML Models</span>
+            <div class="avatar">DA</div>
+          </div>
+
+          <div class="info-stack">
+            <div class="info-row">
+              <div class="info-icon">👤</div>
+              <div>
+                <strong>Darcy Awah Achunguh</strong>
+                <span>Data and business professional based in Essex, Ontario, Canada.</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">✉</div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:awahdarcy@gmail.com">awahdarcy@gmail.com</a>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">☎</div>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+16478083391">647-808-3391</a>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">🔗</div>
+              <div>
+                <strong>Professional links</strong>
+                <a href="https://www.linkedin.com/in/darcy-awah-achunguh-85a83331b/" target="_blank" rel="noopener">LinkedIn profile</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section shell scroll-reveal" id="skills">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Interactive skill visualizations</span>
+          <h2>Technical and business strengths</h2>
+        </div>
+        <p class="section-note">
+          The charts below summarize the main capability areas from the resume. Hover over the visuals and switch themes to see the profile adapt.
+        </p>
+      </div>
+
+      <div class="visual-grid">
+        <div class="panel">
+          <h3>Capability radar</h3>
+          <p>Relative profile focus across analytics, engineering, ML, visualization, cloud tools, and business analysis.</p>
+          <canvas id="radarCanvas" height="380" aria-label="Capability radar chart" role="img"></canvas>
+        </div>
+        <div class="panel">
+          <h3>Skill category coverage</h3>
+          <p>Grouped resume skills by category, including SQL, Python, BI, big data, machine learning, and tools.</p>
+          <canvas id="barsCanvas" height="380" aria-label="Skill category bar chart" role="img"></canvas>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-top:18px;">
+        <h3>Toolbox</h3>
+        <p>Hover over each chip to highlight the tools and techniques used across analytics, data engineering, and machine learning.</p>
+        <div class="skill-cloud" id="skillCloud"></div>
+      </div>
+    </section>
+
+    <section class="section shell scroll-reveal" id="experience">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Experience timeline</span>
+          <h2>Role-based impact</h2>
+        </div>
+        <p class="section-note">
+          Select a role area to view tailored achievements from the Metro College of Technology experience.
+        </p>
+      </div>
+
+      <div class="experience-layout">
+        <div class="timeline" id="timeline" aria-label="Role timeline"></div>
+        <div class="panel role-card" id="roleCard" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section shell scroll-reveal" id="projects">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Project portfolio</span>
+          <h2>Applied data projects</h2>
+        </div>
+        <p class="section-note">
+          Filter the portfolio by focus area. Each project connects business questions to clean data, modeling, dashboards, and measurable decision support.
+        </p>
+      </div>
+
+      <div class="filter-row" role="group" aria-label="Project filters">
+        <button class="filter-btn active" type="button" data-filter="all">All</button>
+        <button class="filter-btn" type="button" data-filter="machine-learning">Machine Learning</button>
+        <button class="filter-btn" type="button" data-filter="regression">Regression</button>
+        <button class="filter-btn" type="button" data-filter="dashboard">Dashboard</button>
+        <button class="filter-btn" type="button" data-filter="classification">Classification</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid"></div>
+    </section>
+
+    <section class="section shell scroll-reveal" id="education">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Education</span>
+          <h2>Academic foundation</h2>
+        </div>
+        <p class="section-note">
+          Data science training is supported by graduate business education and an economics background.
+        </p>
+      </div>
+
+      <div class="education-grid">
+        <article class="education-card">
+          <small>Nov 2025 – Jul 2026</small>
+          <h3>Metro College of Technology</h3>
+          <p>Advanced Diploma in Data Science and Applications.</p>
+        </article>
+        <article class="education-card">
+          <small>Aug 2017 – Jun 2019</small>
+          <h3>Siam University</h3>
+          <p>Master of Business Administration, Bangkok, Thailand.</p>
+        </article>
+        <article class="education-card">
+          <small>Oct 2009 – Jun 2012</small>
+          <h3>University of Buea</h3>
+          <p>Bachelor’s Degree in Economics, Buea, Cameroon.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell scroll-reveal" id="contact">
+      <div class="contact-card">
+        <div>
+          <span class="eyebrow">Let’s connect</span>
+          <h2>Ready to discuss data, analytics, or business solutions?</h2>
+          <p class="section-note">
+            Available for opportunities involving business analysis, data analysis, data engineering, data science, reporting automation, dashboards, and machine learning solutions.
+          </p>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="mailto:awahdarcy@gmail.com">Email Darcy</a>
+          <button class="btn" type="button" id="copyEmail">Copy Email</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <p>© <span id="year"></span> Darcy Awah Achunguh. Interactive professional profile built with HTML, CSS, and JavaScript.</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Email copied</div>
+
+  <script>
+    const profile = {
+      email: "awahdarcy@gmail.com",
+      skills: [
+        "Python", "SQL", "PostgreSQL", "R", "Power BI", "Tableau", "Excel", "DAX",
+        "Pandas", "NumPy", "Matplotlib", "Plotly", "Scikit-learn", "XGBoost", "LightGBM",
+        "TensorFlow", "Keras", "SHAP", "Kafka", "Hadoop", "Spark", "Hive", "PySpark",
+        "Spark SQL", "Apache Nifi", "Talend", "Informatica", "Azure Machine Learning",
+        "Databricks", "Git", "Docker", "Linux", "Jupyter Notebook", "Visual Studio Code",
+        "Requirements Gathering", "UAT", "KPI Reporting", "Stakeholder Communication"
+      ],
+      radar: [
+        { label: "Analytics", value: 92 },
+        { label: "Data Engineering", value: 86 },
+        { label: "Machine Learning", value: 84 },
+        { label: "Visualization", value: 89 },
+        { label: "Cloud & Tools", value: 78 },
+        { label: "Business Analysis", value: 90 }
+      ],
+      bars: [
+        { label: "Programming", value: 5 },
+        { label: "ML / AI", value: 7 },
+        { label: "BI & Analytics", value: 7 },
+        { label: "Big Data", value: 9 },
+        { label: "Cloud & Tools", value: 8 },
+        { label: "Business", value: 5 }
+      ],
+      roles: [
+        {
+          role: "Data Engineer",
+          period: "Metro College of Technology • Nov 2024 – Jul 2025",
+          summary: "Designed and maintained scalable data pipelines, warehouse solutions, and automated workflows.",
+          bullets: [
+            "Designed, developed, and maintained scalable ETL/ELT data pipelines to ingest, transform, and integrate data from multiple sources.",
+            "Built and optimized SQL databases and data warehouse solutions by improving data models, tuning queries, and supporting analytics use cases.",
+            "Automated data workflows using Python and SQL with validation, monitoring, and error-handling processes.",
+            "Collaborated with Data Science, Product, and Engineering teams to deliver trusted datasets for reporting and machine learning initiatives."
+          ]
+        },
+        {
+          role: "Data Analyst",
+          period: "Metro College of Technology • Nov 2024 – Jul 2025",
+          summary: "Cleaned, analyzed, and visualized large datasets to support performance monitoring and decision-making.",
+          bullets: [
+            "Collected, cleaned, transformed, and analyzed datasets using SQL, Python, and Excel.",
+            "Developed interactive dashboards and automated reports using Power BI and Tableau.",
+            "Performed statistical analysis and exploratory data analysis to uncover insights and process improvement opportunities.",
+            "Partnered with business, product, and operations teams to validate requirements and communicate findings clearly."
+          ]
+        },
+        {
+          role: "Business Analyst",
+          period: "Metro College of Technology • Nov 2024 – Jul 2025",
+          summary: "Translated stakeholder needs into clear requirements, functional specifications, and actionable dashboards.",
+          bullets: [
+            "Gathered, analyzed, and documented business requirements by working directly with stakeholders.",
+            "Analyzed processes and operational data to identify inefficiencies and recommend improvements.",
+            "Built reports, dashboards, and KPI metrics using SQL, Excel, Power BI, and Tableau.",
+            "Supported project delivery, UAT, and cross-functional coordination across Product, IT, Engineering, and QA teams."
+          ]
+        },
+        {
+          role: "Data Scientist",
+          period: "Metro College of Technology • Nov 2024 – Jul 2025",
+          summary: "Built predictive models, evaluated performance, and communicated model insights to business teams.",
+          bullets: [
+            "Developed machine learning models using Python and statistical techniques to solve business problems.",
+            "Performed data cleaning, feature engineering, model training, and predictive analysis on complex datasets.",
+            "Evaluated models using F1 Score, ROC-AUC, Precision, Recall, RMSE, and R².",
+            "Used cross-validation, hyperparameter tuning, dashboards, and visualizations to communicate results and support deployment."
+          ]
+        }
+      ],
+      projects: [
+        {
+          title: "Bank Marketing Classification Project",
+          category: "classification machine-learning",
+          tag: "Classification",
+          description: "Built a machine learning model to predict whether customers would subscribe to a bank deposit product. Prepared the data, compared models, evaluated F1 Score and ROC-AUC, and used SHAP for explainability.",
+          tech: ["Python", "Pandas", "Scikit-learn", "XGBoost", "LightGBM", "SHAP"]
+        },
+        {
+          title: "House Price Prediction Regression Project",
+          category: "regression machine-learning",
+          tag: "Regression",
+          description: "Developed a regression model to predict house prices using property and location-based features. Performed data cleaning, feature engineering, model comparison, and regression evaluation.",
+          tech: ["Python", "Pandas", "Random Forest", "XGBoost", "LightGBM", "R²"]
+        },
+        {
+          title: "Customer Retention Dashboard Project",
+          category: "dashboard",
+          tag: "Dashboard",
+          description: "Created an interactive Power BI dashboard to track retention, revenue trends, and business performance. Used SQL to extract data and built KPIs, slicers, charts, and summary reports.",
+          tech: ["SQL", "Power BI", "Excel", "DAX", "KPIs"]
+        },
+        {
+          title: "Employee Attrition Prediction Project",
+          category: "classification machine-learning",
+          tag: "Classification",
+          description: "Built a classification model to identify employees at risk of leaving. Analyzed employee factors, evaluated Precision, Recall, F1 Score, ROC-AUC, and generated HR-focused insights.",
+          tech: ["Python", "Pandas", "Scikit-learn", "Power BI", "ROC-AUC"]
+        }
+      ]
+    };
+
+    const css = getComputedStyle(document.documentElement);
+    const getVar = name => css.getPropertyValue(name).trim();
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 1800);
+    }
+
+    function animateCounters() {
+      document.querySelectorAll("[data-count]").forEach(el => {
+        const target = Number(el.dataset.count);
+        let current = 0;
+        const duration = 900;
+        const start = performance.now();
+        function tick(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          current = Math.round(target * progress);
+          el.textContent = current + (target >= 6 ? "+" : "");
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      });
+    }
+
+    function drawRadar() {
+      const canvas = document.getElementById("radarCanvas");
+      const ctx = canvas.getContext("2d");
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * dpr;
+      canvas.height = 380 * dpr;
+      ctx.scale(dpr, dpr);
+      ctx.clearRect(0, 0, rect.width, 380);
+
+      const centerX = rect.width / 2;
+      const centerY = 190;
+      const radius = Math.min(rect.width, 380) * 0.31;
+      const points = profile.radar.length;
+      const angleStep = (Math.PI * 2) / points;
+      const text = getVar("--text");
+      const muted = getVar("--muted");
+      const brand = getVar("--brand");
+      const brand2 = getVar("--brand-2");
+
+      ctx.lineWidth = 1;
+      for (let ring = 1; ring <= 5; ring++) {
+        ctx.beginPath();
+        for (let i = 0; i < points; i++) {
+          const angle = -Math.PI / 2 + angleStep * i;
+          const x = centerX + Math.cos(angle) * radius * ring / 5;
+          const y = centerY + Math.sin(angle) * radius * ring / 5;
+          if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        }
+        ctx.closePath();
+        ctx.strokeStyle = "rgba(160,180,210,0.22)";
+        ctx.stroke();
+      }
+
+      profile.radar.forEach((item, i) => {
+        const angle = -Math.PI / 2 + angleStep * i;
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+        ctx.lineTo(centerX + Math.cos(angle) * radius, centerY + Math.sin(angle) * radius);
+        ctx.strokeStyle = "rgba(160,180,210,0.18)";
+        ctx.stroke();
+
+        const labelX = centerX + Math.cos(angle) * (radius + 44);
+        const labelY = centerY + Math.sin(angle) * (radius + 44);
+        ctx.fillStyle = text;
+        ctx.font = "700 13px Inter, system-ui, sans-serif";
+        ctx.textAlign = labelX < centerX - 10 ? "right" : labelX > centerX + 10 ? "left" : "center";
+        ctx.fillText(item.label, labelX, labelY);
+        ctx.fillStyle = muted;
+        ctx.font = "700 11px Inter, system-ui, sans-serif";
+        ctx.fillText(item.value + "%", labelX, labelY + 15);
+      });
+
+      const gradient = ctx.createLinearGradient(centerX - radius, centerY - radius, centerX + radius, centerY + radius);
+      gradient.addColorStop(0, brand);
+      gradient.addColorStop(1, brand2);
+
+      ctx.beginPath();
+      profile.radar.forEach((item, i) => {
+        const angle = -Math.PI / 2 + angleStep * i;
+        const itemRadius = radius * item.value / 100;
+        const x = centerX + Math.cos(angle) * itemRadius;
+        const y = centerY + Math.sin(angle) * itemRadius;
+        if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      });
+      ctx.closePath();
+      ctx.fillStyle = "rgba(70,213,200,0.17)";
+      ctx.fill();
+      ctx.strokeStyle = gradient;
+      ctx.lineWidth = 3;
+      ctx.stroke();
+
+      profile.radar.forEach((item, i) => {
+        const angle = -Math.PI / 2 + angleStep * i;
+        const itemRadius = radius * item.value / 100;
+        const x = centerX + Math.cos(angle) * itemRadius;
+        const y = centerY + Math.sin(angle) * itemRadius;
+        ctx.beginPath();
+        ctx.arc(x, y, 5.5, 0, Math.PI * 2);
+        ctx.fillStyle = brand;
+        ctx.fill();
+        ctx.strokeStyle = getVar("--bg-soft");
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      });
+    }
+
+    function drawBars() {
+      const canvas = document.getElementById("barsCanvas");
+      const ctx = canvas.getContext("2d");
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width * dpr;
+      canvas.height = 380 * dpr;
+      ctx.scale(dpr, dpr);
+      ctx.clearRect(0, 0, rect.width, 380);
+
+      const pad = { left: 118, right: 24, top: 28, bottom: 34 };
+      const chartW = rect.width - pad.left - pad.right;
+      const chartH = 300;
+      const maxValue = Math.max(...profile.bars.map(d => d.value));
+      const brand = getVar("--brand");
+      const brand2 = getVar("--brand-2");
+      const text = getVar("--text");
+      const muted = getVar("--muted");
+
+      ctx.font = "700 12px Inter, system-ui, sans-serif";
+      profile.bars.forEach((d, i) => {
+        const y = pad.top + i * (chartH / profile.bars.length) + 7;
+        const barH = 26;
+        const w = (d.value / maxValue) * chartW;
+
+        ctx.fillStyle = muted;
+        ctx.textAlign = "right";
+        ctx.fillText(d.label, pad.left - 14, y + 18);
+
+        ctx.fillStyle = "rgba(160,180,210,0.15)";
+        roundRect(ctx, pad.left, y, chartW, barH, 12);
+        ctx.fill();
+
+        const gradient = ctx.createLinearGradient(pad.left, 0, pad.left + chartW, 0);
+        gradient.addColorStop(0, brand);
+        gradient.addColorStop(1, brand2);
+        ctx.fillStyle = gradient;
+        roundRect(ctx, pad.left, y, w, barH, 12);
+        ctx.fill();
+
+        ctx.fillStyle = text;
+        ctx.textAlign = "left";
+        ctx.fillText(d.value + " skills", pad.left + w + 8, y + 18);
+      });
+
+      ctx.fillStyle = muted;
+      ctx.textAlign = "center";
+      ctx.font = "700 12px Inter, system-ui, sans-serif";
+      ctx.fillText("Number of tools / methods represented by category", rect.width / 2, 356);
+    }
+
+    function roundRect(ctx, x, y, width, height, radius) {
+      const r = Math.min(radius, width / 2, height / 2);
+      ctx.beginPath();
+      ctx.moveTo(x + r, y);
+      ctx.arcTo(x + width, y, x + width, y + height, r);
+      ctx.arcTo(x + width, y + height, x, y + height, r);
+      ctx.arcTo(x, y + height, x, y, r);
+      ctx.arcTo(x, y, x + width, y, r);
+      ctx.closePath();
+    }
+
+    function renderSkillCloud() {
+      const cloud = document.getElementById("skillCloud");
+      cloud.innerHTML = profile.skills.map(skill => `<span class="skill-chip">${skill}</span>`).join("");
+    }
+
+    function renderTimeline(activeIndex = 0) {
+      const timeline = document.getElementById("timeline");
+      timeline.innerHTML = profile.roles.map((item, index) => `
+        <button class="timeline-item ${index === activeIndex ? "active" : ""}" type="button" data-role-index="${index}">
+          <small>${item.period}</small>
+          <h3>${item.role}</h3>
+          <p>${item.summary}</p>
+        </button>
+      `).join("");
+
+      timeline.querySelectorAll("[data-role-index]").forEach(button => {
+        button.addEventListener("click", () => {
+          renderTimeline(Number(button.dataset.roleIndex));
+        });
+      });
+
+      const role = profile.roles[activeIndex];
+      document.getElementById("roleCard").innerHTML = `
+        <span class="role-label">${role.period}</span>
+        <h3>${role.role}</h3>
+        <p>${role.summary}</p>
+        <ul>${role.bullets.map(b => `<li>${b}</li>`).join("")}</ul>
+      `;
+    }
+
+    function renderProjects(filter = "all") {
+      const grid = document.getElementById("projectGrid");
+      grid.innerHTML = profile.projects.map(project => {
+        const hidden = filter !== "all" && !project.category.includes(filter);
+        return `
+          <article class="project-card ${hidden ? "hide" : ""}" data-category="${project.category}">
+            <span class="tag">${project.tag}</span>
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <div class="tech-list">${project.tech.map(t => `<span>${t}</span>`).join("")}</div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function initFilters() {
+      document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderProjects(btn.dataset.filter);
+        });
+      });
+    }
+
+    function initReveal() {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll(".scroll-reveal").forEach(el => observer.observe(el));
+    }
+
+    function initTheme() {
+      const saved = localStorage.getItem("darcy-theme");
+      if (saved) document.documentElement.dataset.theme = saved;
+
+      document.getElementById("themeToggle").addEventListener("click", () => {
+        const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        localStorage.setItem("darcy-theme", next);
+        setTimeout(() => { drawRadar(); drawBars(); }, 80);
+      });
+    }
+
+    function initContactButtons() {
+      document.getElementById("copyEmail").addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(profile.email);
+          showToast("Email copied: " + profile.email);
+        } catch {
+          showToast(profile.email);
+        }
+      });
+
+      document.getElementById("printProfile").addEventListener("click", () => window.print());
+      document.getElementById("year").textContent = new Date().getFullYear();
+    }
+
+    window.addEventListener("resize", () => {
+      clearTimeout(window.__chartResize);
+      window.__chartResize = setTimeout(() => {
+        drawRadar();
+        drawBars();
+      }, 120);
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      initTheme();
+      renderSkillCloud();
+      renderTimeline();
+      renderProjects();
+      initFilters();
+      initReveal();
+      initContactButtons();
+      animateCounters();
+      setTimeout(() => { drawRadar(); drawBars(); }, 100);
+    });
+  </script>
+</body>
+</html>
