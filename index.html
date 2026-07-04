@@ -3,51 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Professional interactive profile for Darcy Awah Achunguh, Data Scientist, Data Analyst, and Data Engineer." />
-  <title>Darcy Awah Achunguh | Data Science · Analytics · Engineering</title>
+  <meta name="description" content="Darcy Awah Achunguh — interactive portfolio for Data Science, Data Analysis, and Data Engineering roles." />
+  <meta name="author" content="Darcy Awah Achunguh" />
+  <meta property="og:title" content="Darcy Awah Achunguh | Data Scientist Portfolio" />
+  <meta property="og:description" content="Interactive portfolio showing machine learning, analytics, BI, SQL, cloud, Databricks, PySpark, and data engineering experience." />
+  <title>Darcy Awah Achunguh | Senior Data Science Portfolio</title>
   <style>
     :root {
-      --bg: #07111f;
-      --bg2: #0d1b33;
-      --surface: rgba(255,255,255,.075);
-      --surface2: rgba(255,255,255,.118);
-      --surface3: rgba(255,255,255,.17);
+      --bg: #05101f;
+      --bg-2: #07172c;
+      --bg-3: #0d2341;
+      --card: rgba(9, 24, 45, 0.78);
+      --card-2: rgba(255, 255, 255, 0.075);
+      --glass: rgba(255, 255, 255, 0.09);
+      --line: rgba(255, 255, 255, 0.14);
       --text: #f4f8ff;
-      --muted: #a9b8cf;
-      --soft: #d8e5fb;
-      --line: rgba(255,255,255,.16);
-      --accent: #57f7d3;
-      --accent2: #8fa7ff;
-      --accent3: #f9ce6d;
-      --accent4: #ff7da9;
-      --shadow: 0 24px 80px rgba(0,0,0,.28);
+      --muted: #a9b9cf;
+      --soft: #dce8f8;
+      --accent: #38e8c6;
+      --accent-2: #64a8ff;
+      --accent-3: #a78bfa;
+      --accent-4: #ffd166;
+      --viz-primary: #2f80ed;
+      --viz-secondary: #14b8a6;
+      --viz-tertiary: #8b5cf6;
+      --viz-soft: rgba(47, 128, 237, 0.16);
+      --viz-soft-2: rgba(20, 184, 166, 0.14);
+      --viz-stroke: rgba(148, 163, 184, 0.26);
+      --danger: #ff6b8a;
+      --good: #79f2ad;
+      --shadow: 0 30px 100px rgba(0, 0, 0, 0.36);
       --radius: 26px;
-      --max: 1200px;
+      --radius-sm: 16px;
+      --max: 1220px;
+      --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    [data-theme="light"] {
-      --bg: #eef5ff;
-      --bg2: #ffffff;
-      --surface: rgba(255,255,255,.78);
-      --surface2: rgba(255,255,255,.94);
-      --surface3: rgba(255,255,255,1);
-      --text: #0b1729;
-      --muted: #56647b;
-      --soft: #243551;
-      --line: rgba(20,40,70,.13);
-      --shadow: 0 24px 70px rgba(30,70,120,.15);
+    body.light {
+      --bg: #f4f7fb;
+      --bg-2: #eaf1f9;
+      --bg-3: #dce9f7;
+      --card: rgba(255, 255, 255, 0.86);
+      --card-2: rgba(9, 24, 45, 0.06);
+      --glass: rgba(255, 255, 255, 0.72);
+      --line: rgba(14, 33, 58, 0.14);
+      --text: #07182d;
+      --muted: #526276;
+      --soft: #172a44;
+      --accent: #008c7a;
+      --accent-2: #1d65d8;
+      --accent-3: #7448da;
+      --accent-4: #b77800;
+      --viz-primary: #2563eb;
+      --viz-secondary: #0f766e;
+      --viz-tertiary: #6d28d9;
+      --viz-soft: rgba(37, 99, 235, 0.10);
+      --viz-soft-2: rgba(15, 118, 110, 0.09);
+      --viz-stroke: rgba(15, 23, 42, 0.16);
+      --shadow: 0 24px 80px rgba(29, 52, 83, 0.16);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at 6% 7%, rgba(87,247,211,.24), transparent 28%),
-        radial-gradient(circle at 88% 13%, rgba(143,167,255,.30), transparent 31%),
-        radial-gradient(circle at 52% 100%, rgba(249,206,109,.11), transparent 28%),
-        linear-gradient(140deg, var(--bg), #020815 55%, var(--bg2));
+      margin: 0;
+      font-family: var(--font);
       color: var(--text);
+      background:
+        radial-gradient(circle at var(--mx, 50%) var(--my, 10%), rgba(56,232,198,.20), transparent 25rem),
+        radial-gradient(circle at 10% 12%, rgba(100,168,255,.22), transparent 34rem),
+        radial-gradient(circle at 85% 8%, rgba(167,139,250,.22), transparent 33rem),
+        linear-gradient(135deg, var(--bg), var(--bg-2) 55%, var(--bg));
       min-height: 100vh;
       overflow-x: hidden;
     }
@@ -57,1607 +83,1148 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
+      z-index: -3;
+      opacity: .42;
       background-image:
-        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
-      background-size: 52px 52px;
-      mask-image: linear-gradient(to bottom, black, transparent 78%);
-      z-index: -1;
+        linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.88), transparent 82%);
     }
+
+    body::after {
+      content: "";
+      position: fixed;
+      width: 42rem;
+      height: 42rem;
+      right: -18rem;
+      top: 18rem;
+      background: radial-gradient(circle, rgba(56,232,198,.12), transparent 70%);
+      z-index: -2;
+      filter: blur(2px);
+      pointer-events: none;
+      animation: drift 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes drift { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(-5rem,4rem,0) scale(1.12); } }
 
     a { color: inherit; text-decoration: none; }
-    button, input, select { font: inherit; }
+    button, input { font: inherit; }
+    .container { width: min(var(--max), calc(100% - 36px)); margin: 0 auto; }
+    .section { padding: 88px 0 0; scroll-margin-top: 90px; }
+    .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .18em; font-weight: 800; font-size: .75rem; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font-size: clamp(2.4rem, 5vw, 5.8rem); line-height: .94; letter-spacing: -.07em; margin-bottom: 24px; }
+    h2 { font-size: clamp(1.75rem, 3vw, 3.25rem); letter-spacing: -.045em; margin-bottom: 12px; }
+    h3 { font-size: 1.13rem; letter-spacing: -.02em; }
+    p { color: var(--muted); line-height: 1.72; }
+    .lead { font-size: 1.08rem; max-width: 780px; color: var(--soft); }
+    .muted { color: var(--muted); }
+    .gradient-text { background: linear-gradient(110deg, var(--accent), var(--accent-2), var(--accent-3)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
-    .container {
-      width: min(var(--max), calc(100% - 36px));
-      margin: 0 auto;
-    }
+    .skip { position: absolute; left: -999px; top: 8px; background: var(--accent); color: #03111d; padding: 10px 12px; border-radius: 10px; z-index: 99; }
+    .skip:focus { left: 12px; }
 
-    .nav {
-      position: sticky;
-      top: 14px;
-      z-index: 100;
-      margin: 14px auto 0;
-      width: min(var(--max), calc(100% - 36px));
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 12px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: color-mix(in srgb, var(--surface2) 88%, transparent);
-      backdrop-filter: blur(20px);
-      box-shadow: var(--shadow);
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 900;
-      letter-spacing: -.04em;
-    }
-
-    .brand-mark {
-      width: 42px;
-      height: 42px;
-      border-radius: 15px;
-      display: grid;
-      place-items: center;
-      color: #061120;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 14px 30px rgba(87,247,211,.19);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      color: var(--muted);
-      font-weight: 750;
-      font-size: .9rem;
-    }
-
-    .nav-links a, .icon-btn {
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      transition: .24s ease;
-    }
-
-    .nav-links a:hover, .icon-btn:hover {
-      color: var(--text);
-      background: var(--surface);
-      border-color: var(--line);
-    }
-
-    .icon-btn {
-      cursor: pointer;
-      color: var(--text);
-      background: var(--surface);
-      border-color: var(--line);
-      font-weight: 900;
-    }
-
-    .hero {
-      min-height: 88vh;
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 34px;
-      align-items: center;
-      padding: 72px 0 48px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      gap: 9px;
-      align-items: center;
-      padding: 8px 13px;
-      border: 1px solid rgba(87,247,211,.28);
-      border-radius: 999px;
-      color: var(--accent);
-      background: rgba(87,247,211,.09);
-      font-size: .88rem;
-      font-weight: 900;
-      margin-bottom: 18px;
-    }
-
-    .pulse {
-      width: 9px;
-      height: 9px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 0 rgba(87,247,211,.7);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(87,247,211,.60); }
-      70% { box-shadow: 0 0 0 14px rgba(87,247,211,0); }
-      100% { box-shadow: 0 0 0 0 rgba(87,247,211,0); }
-    }
-
-    h1 {
-      font-size: clamp(2.65rem, 7vw, 6.6rem);
-      line-height: .90;
-      letter-spacing: -.08em;
-      margin-bottom: 18px;
-    }
-
-    .gradient {
-      background: linear-gradient(135deg, var(--text), var(--accent), var(--accent2), var(--accent3));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .lead {
-      max-width: 730px;
-      color: var(--muted);
-      font-size: 1.06rem;
-      line-height: 1.75;
-    }
-
-    .role-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 28px 0 0;
-    }
-
-    .role-tab, .cta, .filter-btn {
-      border: 1px solid var(--line);
-      color: var(--text);
-      background: var(--surface);
-      border-radius: 999px;
-      padding: 11px 14px;
-      font-weight: 900;
-      cursor: pointer;
-      transition: .24s ease;
-    }
-
-    .role-tab.active, .role-tab:hover, .filter-btn.active, .filter-btn:hover {
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #041020;
-      border-color: transparent;
-      transform: translateY(-2px);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 22px;
-    }
-
-    .cta.primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #041020;
-      border: none;
-      box-shadow: 0 20px 40px rgba(87,247,211,.17);
-    }
-
-    .cta:hover { transform: translateY(-2px); background: var(--surface2); }
-
-    .profile-console {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, var(--surface2), var(--surface));
-      backdrop-filter: blur(22px);
-      box-shadow: var(--shadow);
-      padding: 22px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .profile-console::after {
-      content: "";
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      right: -100px;
-      top: -90px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(87,247,211,.23), transparent 72%);
-      pointer-events: none;
-    }
-
-    .console-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-      gap: 12px;
-    }
-
-    .console-title strong { display: block; font-size: 1.1rem; }
-    .console-title span { color: var(--muted); font-size: .88rem; }
-
-    .status-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--accent);
-      border: 1px solid rgba(87,247,211,.28);
-      background: rgba(87,247,211,.08);
-      border-radius: 999px;
-      padding: 7px 10px;
-      font-size: .78rem;
-      font-weight: 900;
-    }
-
-    .code-card {
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: rgba(2,8,21,.70);
-      padding: 16px;
-      color: #dce9ff;
-      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-      line-height: 1.9;
-      overflow: hidden;
-      margin-bottom: 16px;
-    }
-
-    [data-theme="light"] .code-card {
-      background: #07111f;
-    }
-
-    .code-card span { color: var(--accent); }
-
-    .role-panel {
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: rgba(255,255,255,.045);
-      padding: 17px;
-    }
-
-    .role-panel h3 { font-size: 1.05rem; margin-bottom: 8px; }
-    .role-panel p { color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
-    .role-panel ul { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; list-style: none; }
-    .role-panel li {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.05);
-      color: var(--soft);
-      padding: 8px 10px;
-      border-radius: 999px;
-      font-size: .86rem;
-    }
-
-    .section {
-      padding: 52px 0;
-      scroll-margin-top: 100px;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 24px;
-      margin-bottom: 24px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(2rem, 4.8vw, 4.2rem);
-      line-height: .95;
-      letter-spacing: -.07em;
-    }
-
-    .section-head p {
-      max-width: 610px;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    .metrics {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-top: -34px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .metric-card, .value-card, .panel, .timeline-item, .project-card {
-      border: 1px solid var(--line);
-      background: var(--surface);
-      backdrop-filter: blur(20px);
-      box-shadow: var(--shadow);
-    }
-
-    .metric-card {
-      border-radius: 22px;
-      padding: 22px;
-    }
-
-    .metric-value {
-      font-size: 2.5rem;
-      letter-spacing: -.07em;
-      font-weight: 950;
-      color: var(--text);
-    }
-
-    .metric-card p {
-      color: var(--muted);
-      line-height: 1.35;
-      margin-top: 5px;
-    }
-
-    .value-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .value-card {
-      border-radius: 22px;
-      padding: 20px;
-      min-height: 210px;
-      transition: .28s ease;
-    }
-
-    .value-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(87,247,211,.36);
-      background: var(--surface2);
-    }
-
-    .value-card span {
-      color: var(--accent);
-      font-weight: 950;
-      display: inline-flex;
-      margin-bottom: 22px;
-    }
-
-    .value-card h3 { margin-bottom: 10px; }
-    .value-card p { color: var(--muted); line-height: 1.65; }
-
-    .dashboard-grid {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 18px;
-    }
-
-    .panel {
-      border-radius: var(--radius);
-      padding: 22px;
-      overflow: hidden;
-    }
-
-    .panel h3 {
-      font-size: 1.05rem;
-      margin-bottom: 6px;
-    }
-
-    .panel-sub {
-      color: var(--muted);
-      font-size: .9rem;
-      line-height: 1.55;
-      margin-bottom: 15px;
-    }
-
-    .chart {
-      min-height: 330px;
-      width: 100%;
-      position: relative;
-    }
-
-    .chart svg {
-      width: 100%;
-      height: 330px;
-      overflow: visible;
-    }
-
-    .chart-tooltip {
+    .topbar {
       position: fixed;
-      opacity: 0;
-      pointer-events: none;
-      z-index: 999;
-      background: rgba(2,8,21,.94);
-      color: white;
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 13px;
-      padding: 9px 11px;
-      font-size: .84rem;
-      transform: translate(-50%, calc(-100% - 12px));
-      box-shadow: 0 16px 35px rgba(0,0,0,.28);
-      transition: opacity .12s ease;
-    }
-
-    .skill-layout {
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(var(--max), calc(100% - 28px));
       display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 18px;
-    }
-
-    .skill-side {
-      border: 1px solid var(--line);
-      background: var(--surface);
-      border-radius: var(--radius);
-      padding: 18px;
-      height: fit-content;
-      position: sticky;
-      top: 96px;
-    }
-
-    .skill-side h3 { margin-bottom: 12px; }
-    .skill-side .filter-btn {
-      width: 100%;
-      margin-bottom: 8px;
-      text-align: left;
-      justify-content: flex-start;
-    }
-
-    .skill-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .skill-card {
-      border-radius: 22px;
-      padding: 18px;
-      transition: .25s ease;
-    }
-
-    .skill-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(143,167,255,.42);
-      background: var(--surface2);
-    }
-
-    .skill-card header {
-      display: flex;
-      justify-content: space-between;
+      grid-template-columns: auto 1fr auto;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 13px;
-    }
-
-    .skill-card header strong {
-      color: #041020;
-      background: var(--accent);
-      border-radius: 999px;
-      padding: 5px 9px;
-      font-size: .8rem;
-    }
-
-    .chip-wrap, .tool-list, .cert-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .chip, .tool-list button, .cert-list span {
-      border: 1px solid var(--line);
-      color: var(--muted);
-      background: rgba(255,255,255,.045);
-      border-radius: 999px;
-      padding: 8px 10px;
-      cursor: pointer;
-      transition: .2s ease;
-      font-size: .84rem;
-    }
-
-    .chip.active, .chip:hover, .tool-list button:hover {
-      color: #041020;
-      background: var(--accent);
-      border-color: transparent;
-      transform: translateY(-1px);
-      font-weight: 900;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 13px;
-      position: relative;
-    }
-
-    .timeline::before {
-      content: "";
-      position: absolute;
-      left: 21px;
-      top: 10px;
-      bottom: 10px;
-      width: 2px;
-      background: linear-gradient(var(--accent), var(--accent2), transparent);
-      opacity: .6;
-    }
-
-    .timeline-item {
-      margin-left: 52px;
-      border-radius: 22px;
-      overflow: hidden;
-    }
-
-    .timeline-main {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 142px 1fr auto;
       gap: 16px;
-      align-items: center;
-      text-align: left;
-      padding: 18px;
-      color: var(--text);
-      background: transparent;
-      border: none;
-      cursor: pointer;
+      z-index: 30;
+      padding: 10px;
+      border: 1px solid var(--line);
+      background: rgba(5, 16, 31, .66);
+      backdrop-filter: blur(24px);
+      border-radius: 999px;
+      box-shadow: 0 18px 80px rgba(0,0,0,.20);
+    }
+    body.light .topbar { background: rgba(255,255,255,.66); }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 900; letter-spacing: -.02em; padding: 2px 12px 2px 2px; white-space: nowrap; }
+    .logo { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #04111f; font-weight: 950; box-shadow: 0 12px 32px rgba(56,232,198,.24); }
+    .nav { display: flex; align-items: center; justify-content: center; gap: 6px; }
+    .nav a { padding: 10px 12px; border-radius: 999px; color: var(--muted); font-size: .9rem; font-weight: 720; transition: .22s ease; }
+    .nav a:hover, .nav a.active { color: var(--text); background: var(--card-2); }
+    .top-actions { display: flex; gap: 8px; align-items: center; }
+    .icon-btn { border: 1px solid var(--line); background: var(--glass); color: var(--text); width: 42px; height: 42px; border-radius: 50%; cursor: pointer; display: grid; place-items: center; transition: .22s ease; }
+    .icon-btn:hover { transform: translateY(-2px); border-color: rgba(56,232,198,.46); }
+    .menu-btn { display: none; }
+
+    .mobile-nav { display: none; position: fixed; top: 78px; left: 18px; right: 18px; z-index: 31; padding: 16px; background: var(--card); border: 1px solid var(--line); border-radius: 22px; backdrop-filter: blur(24px); box-shadow: var(--shadow); }
+    .mobile-nav.open { display: grid; gap: 8px; }
+    .mobile-nav a { padding: 13px 14px; border-radius: 15px; color: var(--muted); background: var(--card-2); }
+
+    .hero { padding: 132px 0 44px; min-height: 92vh; display: grid; align-items: center; }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 28px; align-items: center; }
+    .hero-copy { position: relative; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 24px; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--card-2); color: var(--soft); padding: 9px 12px; border-radius: 999px; font-size: .86rem; font-weight: 720; backdrop-filter: blur(18px); }
+    .pulse-dot { width: 8px; height: 8px; background: var(--good); border-radius: 50%; box-shadow: 0 0 0 8px rgba(121,242,173,.12); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .btn { border: 1px solid transparent; border-radius: 999px; padding: 13px 17px; font-weight: 850; cursor: pointer; transition: .25s ease; display: inline-flex; align-items: center; gap: 10px; }
+    .btn.primary { color: #04111f; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 18px 45px rgba(56,232,198,.18); }
+    .btn.secondary { color: var(--text); background: var(--glass); border-color: var(--line); }
+    .btn:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .availability { margin-top: 22px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; color: var(--muted); font-size: .95rem; }
+    .availability strong { color: var(--text); }
+
+    .dash-card {
+      border: 1px solid rgba(148, 163, 184, .22);
+      background:
+        linear-gradient(145deg, rgba(15, 34, 61, .86), rgba(10, 25, 47, .68)),
+        radial-gradient(circle at 18% 0%, rgba(47,128,237,.16), transparent 38%),
+        radial-gradient(circle at 86% 16%, rgba(20,184,166,.12), transparent 34%);
+      border-radius: 34px;
+      padding: 20px;
+      box-shadow: 0 28px 95px rgba(0, 0, 0, .30);
+      backdrop-filter: blur(26px);
       position: relative;
-    }
-
-    .timeline-dot {
-      position: absolute;
-      left: -39px;
-      top: 24px;
-      width: 17px;
-      height: 17px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 0 8px rgba(87,247,211,.13);
-    }
-
-    .timeline-date {
-      color: var(--accent);
-      font-weight: 900;
-      font-size: .9rem;
-    }
-
-    .timeline-main strong {
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .timeline-main em {
-      color: var(--muted);
-      font-style: normal;
-    }
-
-    .timeline-main small {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.05);
-      color: var(--soft);
-      border-radius: 999px;
-      padding: 7px 10px;
-      font-weight: 900;
-    }
-
-    .timeline-panel {
-      display: grid;
-      grid-template-rows: 0fr;
-      transition: grid-template-rows .34s ease;
-      border-top: 1px solid transparent;
-    }
-
-    .timeline-panel > * {
       overflow: hidden;
-      padding-left: 18px;
-      padding-right: 18px;
     }
-
-    .timeline-item.open .timeline-panel {
-      grid-template-rows: 1fr;
-      border-top-color: var(--line);
+    body.light .dash-card {
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.94), rgba(239,246,255,.82)),
+        radial-gradient(circle at 18% 0%, rgba(37,99,235,.10), transparent 38%),
+        radial-gradient(circle at 86% 16%, rgba(15,118,110,.08), transparent 34%);
+      border-color: rgba(15, 23, 42, .12);
     }
+    .dash-card::before { content: ""; position: absolute; inset: -1px; background: linear-gradient(120deg, rgba(47,128,237,.18), transparent 28%, rgba(20,184,166,.12)); pointer-events: none; opacity: .72; }
+    .dash-inner { position: relative; z-index: 1; display: grid; gap: 16px; }
+    .mini-header { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+    .mini-header strong { font-size: 1rem; }
+    .status-pill { color: #bff7ea; background: rgba(20,184,166,.14); border: 1px solid rgba(20,184,166,.28); padding: 7px 10px; border-radius: 999px; font-size: .78rem; font-weight: 800; white-space: nowrap; box-shadow: inset 0 1px 0 rgba(255,255,255,.08); }
+    body.light .status-pill { color: #0f766e; background: rgba(15,118,110,.08); border-color: rgba(15,118,110,.18); }
+    .canvas-panel { background: linear-gradient(145deg, rgba(3, 13, 27, .30), rgba(22, 43, 73, .22)); border: 1px solid rgba(148,163,184,.18); border-radius: 24px; padding: 12px; min-height: 286px; display: grid; align-items: center; box-shadow: inset 0 1px 0 rgba(255,255,255,.055); }
+    body.light .canvas-panel { background: linear-gradient(145deg, rgba(248,250,252,.92), rgba(237,242,247,.78)); border-color: rgba(15,23,42,.10); }
+    canvas { max-width: 100%; }
+    .stat-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .stat-card { padding: 15px; border: 1px solid var(--line); background: var(--card-2); border-radius: 21px; min-height: 106px; }
+    .stat-card b { display: block; font-size: 1.85rem; letter-spacing: -.04em; margin-bottom: 4px; color: var(--text); }
+    .stat-card span { font-size: .82rem; color: var(--muted); line-height: 1.45; }
 
-    .timeline-panel p {
-      color: var(--muted);
-      line-height: 1.65;
-      padding-top: 16px;
-      padding-bottom: 8px;
-    }
+    .intel-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .intel-card { border: 1px solid rgba(148,163,184,.20); background: linear-gradient(145deg, rgba(30,64,115,.32), rgba(14,31,55,.34)); border-radius: 18px; padding: 13px; position: relative; overflow: hidden; box-shadow: inset 0 1px 0 rgba(255,255,255,.06); }
+    .intel-card:nth-child(2) { background: linear-gradient(145deg, rgba(20,83,95,.30), rgba(14,31,55,.34)); }
+    .intel-card:nth-child(3) { background: linear-gradient(145deg, rgba(76,29,149,.24), rgba(14,31,55,.34)); }
+    body.light .intel-card { background: linear-gradient(145deg, rgba(239,246,255,.96), rgba(255,255,255,.92)); border-color: rgba(15,23,42,.10); }
+    body.light .intel-card:nth-child(2) { background: linear-gradient(145deg, rgba(236,253,245,.94), rgba(255,255,255,.92)); }
+    body.light .intel-card:nth-child(3) { background: linear-gradient(145deg, rgba(245,243,255,.94), rgba(255,255,255,.92)); }
+    .intel-card::after { content: ""; position: absolute; inset: auto -24px -30px auto; width: 82px; height: 82px; background: radial-gradient(circle, rgba(47,128,237,.22), transparent 68%); pointer-events: none; }
+    .intel-card:nth-child(2)::after { background: radial-gradient(circle, rgba(20,184,166,.20), transparent 68%); }
+    .intel-card:nth-child(3)::after { background: radial-gradient(circle, rgba(139,92,246,.18), transparent 68%); }
+    .intel-card small { display: block; color: var(--muted); font-weight: 800; text-transform: uppercase; letter-spacing: .10em; font-size: .66rem; margin-bottom: 6px; }
+    .intel-card strong { color: var(--text); font-size: .92rem; line-height: 1.35; }
+    .intel-card span { display: block; color: #93c5fd; font-weight: 950; font-size: 1.35rem; margin-top: 4px; letter-spacing: -.04em; }
+    .intel-card:nth-child(2) span { color: #5eead4; }
+    .intel-card:nth-child(3) span { color: #c4b5fd; }
+    body.light .intel-card span { color: #1d4ed8; }
+    body.light .intel-card:nth-child(2) span { color: #0f766e; }
+    body.light .intel-card:nth-child(3) span { color: #6d28d9; }
+    .intel-keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+    .keyword-pill { border: 1px solid rgba(59,130,246,.24); background: rgba(59,130,246,.10); color: var(--soft); padding: 7px 9px; border-radius: 999px; font-size: .77rem; font-weight: 820; }
+    .keyword-pill:nth-child(3n+2) { border-color: rgba(20,184,166,.22); background: rgba(20,184,166,.09); }
+    .keyword-pill:nth-child(3n+3) { border-color: rgba(139,92,246,.22); background: rgba(139,92,246,.08); }
+    .role-signal { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 18px; background: linear-gradient(145deg, rgba(15, 33, 62, .38), rgba(8, 20, 39, .22)); border: 1px solid rgba(148,163,184,.18); box-shadow: inset 0 1px 0 rgba(255,255,255,.055); }
+    .role-signal strong { font-size: .9rem; }
+    .role-signal span { color: var(--muted); font-size: .78rem; }
 
-    .timeline-panel ul {
-      color: var(--muted);
-      line-height: 1.65;
-      padding-bottom: 10px;
-      margin-left: 20px;
-    }
+    .domain-insights { display: grid; gap: 10px; margin-top: 14px; }
+    .domain-card { border: 1px solid rgba(148,163,184,.18); background: linear-gradient(145deg, rgba(15, 33, 62, .34), rgba(12, 27, 50, .22)); border-radius: 18px; padding: 13px; cursor: pointer; transition: .22s ease; position: relative; overflow: hidden; }
+    .domain-card::before { content:""; position:absolute; inset:0 auto 0 0; width: 4px; background: linear-gradient(180deg, #2f80ed, #14b8a6); opacity:.72; }
+    .domain-card:nth-child(3n+2)::before { background: linear-gradient(180deg, #14b8a6, #0ea5e9); }
+    .domain-card:nth-child(3n+3)::before { background: linear-gradient(180deg, #6366f1, #8b5cf6); }
+    body.light .domain-card { background: linear-gradient(145deg, rgba(255,255,255,.96), rgba(241,245,249,.88)); border-color: rgba(15,23,42,.10); }
+    .domain-card:hover, .domain-card.active { transform: translateY(-3px); border-color: rgba(59,130,246,.34); background: linear-gradient(145deg, rgba(30,64,115,.40), rgba(14,31,55,.28)); box-shadow: 0 14px 40px rgba(2, 8, 23, .18); }
+    body.light .domain-card:hover, body.light .domain-card.active { background: linear-gradient(145deg, rgba(239,246,255,.96), rgba(255,255,255,.96)); box-shadow: 0 14px 36px rgba(15,23,42,.10); }
+    .domain-head { display: flex; justify-content: space-between; gap: 12px; align-items: center; margin-bottom: 8px; padding-left: 2px; }
+    .domain-head strong { color: var(--text); font-size: .9rem; }
+    .domain-head span { color: #93c5fd; font-weight: 950; font-size: .9rem; }
+    .domain-card:nth-child(3n+2) .domain-head span { color: #5eead4; }
+    .domain-card:nth-child(3n+3) .domain-head span { color: #c4b5fd; }
+    body.light .domain-head span { color: #1d4ed8; }
+    body.light .domain-card:nth-child(3n+2) .domain-head span { color: #0f766e; }
+    body.light .domain-card:nth-child(3n+3) .domain-head span { color: #6d28d9; }
+    .domain-meta { color: var(--muted); font-size: .75rem; line-height: 1.45; }
+    .domain-meter { height: 7px; background: rgba(148,163,184,.16); border-radius: 999px; overflow: hidden; margin-top: 10px; }
+    body.light .domain-meter { background: rgba(15,23,42,.08); }
+    .domain-meter i { display: block; height: 100%; width: var(--w); border-radius: inherit; background: linear-gradient(90deg, #2f80ed, #14b8a6); }
+    .domain-card:nth-child(3n+2) .domain-meter i { background: linear-gradient(90deg, #14b8a6, #0ea5e9); }
+    .domain-card:nth-child(3n+3) .domain-meter i { background: linear-gradient(90deg, #6366f1, #8b5cf6); }
+    .domain-detail { margin-top: 12px; padding: 14px; border: 1px solid rgba(148,163,184,.18); border-radius: 20px; background: linear-gradient(145deg, rgba(15,33,62,.32), rgba(8,20,39,.20)); box-shadow: inset 0 1px 0 rgba(255,255,255,.05); }
+    body.light .domain-detail { background: linear-gradient(145deg, rgba(248,250,252,.96), rgba(239,246,255,.80)); border-color: rgba(15,23,42,.10); }
+    .domain-detail h4 { margin: 0 0 6px; }
+    .domain-detail p { margin: 0 0 10px; font-size: .88rem; line-height: 1.6; }
+    .domain-tags { display: flex; flex-wrap: wrap; gap: 7px; }
 
-    .achievement {
-      margin: 0 18px 18px;
-      padding: 13px;
-      border-radius: 17px;
-      border: 1px solid rgba(87,247,211,.24);
-      background: rgba(87,247,211,.08);
-      color: var(--soft);
-      line-height: 1.55;
-    }
+    .control-deck { margin-top: 30px; display: grid; grid-template-columns: minmax(230px, .8fr) 1.4fr auto; gap: 14px; align-items: center; }
+    .search-box { position: relative; }
+    .search-box input { width: 100%; border: 1px solid var(--line); background: var(--glass); color: var(--text); outline: 0; border-radius: 999px; padding: 14px 48px 14px 18px; backdrop-filter: blur(20px); }
+    .search-box span { position: absolute; right: 17px; top: 50%; transform: translateY(-50%); color: var(--muted); }
+    .segmented { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 7px; border: 1px solid var(--line); background: var(--glass); border-radius: 999px; backdrop-filter: blur(20px); }
+    .segmented button { border: 0; color: var(--muted); background: transparent; padding: 10px 12px; border-radius: 999px; font-weight: 850; cursor: pointer; transition: .2s ease; }
+    .segmented button.active { color: #04111f; background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+    body.light .segmented button.active { color: #fff; }
 
-    .project-toolbar {
-      display: grid;
-      grid-template-columns: 1fr auto auto;
-      gap: 10px;
-      margin-bottom: 18px;
-    }
+    .section-head { display: flex; justify-content: space-between; gap: 22px; align-items: end; margin-bottom: 24px; }
+    .section-head p { max-width: 760px; margin-bottom: 0; }
+    .section-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
 
-    .project-toolbar input, .project-toolbar select {
+    .role-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 18px; }
+    .role-card, .panel, .project-card, .timeline-item, .edu-card, .workflow-step, .skill-card {
       border: 1px solid var(--line);
-      background: var(--surface);
-      color: var(--text);
-      border-radius: 16px;
-      padding: 12px 13px;
-      outline: none;
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 18px 60px rgba(0,0,0,.14);
+      backdrop-filter: blur(22px);
+    }
+    .role-card { padding: 24px; position: relative; overflow: hidden; }
+    .role-card::after { content: ""; position: absolute; width: 12rem; height: 12rem; border-radius: 50%; background: radial-gradient(circle, rgba(56,232,198,.13), transparent 70%); right: -5rem; top: -5rem; pointer-events: none; }
+    .role-score { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin: 20px 0; }
+    .score-ring { --score: 92; width: 124px; aspect-ratio: 1; border-radius: 50%; background: conic-gradient(var(--accent) calc(var(--score) * 1%), rgba(255,255,255,.12) 0); display: grid; place-items: center; position: relative; }
+    .score-ring::before { content:""; position:absolute; inset: 10px; border-radius: inherit; background: var(--bg-2); border: 1px solid var(--line); }
+    .score-ring b { position: relative; font-size: 1.55rem; letter-spacing: -.04em; }
+    .role-list { display: grid; gap: 10px; padding: 0; list-style: none; margin: 0; }
+    .role-list li { display: grid; grid-template-columns: 22px 1fr; gap: 9px; color: var(--muted); line-height: 1.5; }
+    .role-list li::before { content: "✓"; color: var(--accent); font-weight: 900; }
+    .panel { padding: 20px; }
+    .chart-title { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 14px; }
+
+    .filters { display: flex; gap: 9px; flex-wrap: wrap; margin: 18px 0 18px; }
+    .chip { border: 1px solid var(--line); background: var(--card-2); color: var(--muted); padding: 9px 12px; border-radius: 999px; font-size: .86rem; font-weight: 800; cursor: pointer; transition: .2s ease; }
+    .chip:hover, .chip.active { color: var(--text); border-color: rgba(56,232,198,.46); background: rgba(56,232,198,.12); }
+
+    .skills-layout { display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; align-items: start; }
+    .skill-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .skill-card { padding: 16px; transition: .22s ease; overflow: hidden; position: relative; }
+    .skill-card:hover { transform: translateY(-4px); border-color: rgba(56,232,198,.36); }
+    .skill-card.dimmed { opacity: .28; transform: scale(.985); }
+    .skill-top { display: flex; justify-content: space-between; gap: 10px; align-items: center; margin-bottom: 10px; }
+    .skill-top strong { color: var(--text); font-size: .95rem; }
+    .skill-top span { font-size: .78rem; color: var(--accent); font-weight: 900; }
+    .meter { height: 8px; background: rgba(255,255,255,.10); border-radius: 999px; overflow: hidden; }
+    .meter i { display: block; height: 100%; width: var(--w); background: linear-gradient(90deg, var(--accent), var(--accent-2)); border-radius: inherit; transform-origin: left; animation: fill 1.2s ease both; }
+    @keyframes fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    .skill-card small { display: block; margin-top: 10px; color: var(--muted); line-height: 1.55; }
+
+    .tool-cloud { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 16px; }
+    .tool-tag { border: 1px solid var(--line); background: var(--card-2); border-radius: 999px; padding: 8px 10px; color: var(--soft); font-size: .82rem; }
+
+    .timeline { position: relative; display: grid; gap: 16px; }
+    .timeline::before { content: ""; position: absolute; left: 28px; top: 16px; bottom: 16px; width: 2px; background: linear-gradient(var(--accent), var(--accent-2), transparent); opacity: .55; }
+    .timeline-item { padding: 0; overflow: hidden; position: relative; margin-left: 0; }
+    .timeline-btn { width: 100%; border: 0; background: transparent; color: var(--text); cursor: pointer; text-align: left; padding: 22px 22px 22px 70px; position: relative; }
+    .timeline-btn::before { content:""; position: absolute; left: 20px; top: 27px; width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 0 0 8px rgba(56,232,198,.10); }
+    .timeline-title { display: flex; justify-content: space-between; gap: 14px; align-items: flex-start; }
+    .timeline-title strong { font-size: 1.08rem; }
+    .timeline-meta { color: var(--muted); font-size: .9rem; margin-top: 5px; }
+    .expand { border: 1px solid var(--line); border-radius: 999px; padding: 7px 9px; color: var(--muted); font-weight: 900; }
+    .timeline-content { display: none; padding: 0 22px 24px 70px; }
+    .timeline-item.open .timeline-content { display: block; animation: reveal .28s ease both; }
+    @keyframes reveal { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
+    .split-list { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .split-list h4 { margin: 8px 0 10px; }
+    .clean-list { padding-left: 18px; margin: 0; color: var(--muted); line-height: 1.65; }
+    .clean-list li { margin: 7px 0; }
+    .stack-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .mini-tag { color: var(--soft); border: 1px solid var(--line); background: var(--card-2); border-radius: 999px; padding: 6px 9px; font-size: .78rem; }
+
+    .project-toolbar { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; justify-content: space-between; margin: 18px 0; }
+    .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .project-card { padding: 18px; min-height: 292px; display: flex; flex-direction: column; transition: .22s ease; position: relative; overflow: hidden; }
+    .project-card::before { content:""; position:absolute; inset:0; background: radial-gradient(circle at top right, rgba(100,168,255,.13), transparent 42%); opacity:0; transition:.25s ease; }
+    .project-card:hover { transform: translateY(-5px); border-color: rgba(100,168,255,.36); }
+    .project-card:hover::before { opacity:1; }
+    .project-card > * { position: relative; z-index: 1; }
+    .project-type { align-self: flex-start; padding: 7px 9px; border-radius: 999px; font-size: .75rem; font-weight: 900; color: #04111f; background: linear-gradient(135deg, var(--accent), var(--accent-2)); margin-bottom: 14px; }
+    body.light .project-type { color: #fff; }
+    .project-card p { font-size: .93rem; flex: 1; }
+    .project-actions { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 14px; }
+    .text-btn { border: 0; color: var(--accent); background: transparent; padding: 0; font-weight: 900; cursor: pointer; }
+
+    .workflow-grid { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 12px; }
+    .workflow-step { padding: 16px; min-height: 170px; cursor: pointer; transition: .22s ease; }
+    .workflow-step.active, .workflow-step:hover { transform: translateY(-4px); border-color: rgba(56,232,198,.42); background: linear-gradient(145deg, rgba(56,232,198,.12), var(--card)); }
+    .step-num { color: var(--accent); font-size: .78rem; font-weight: 950; letter-spacing: .14em; text-transform: uppercase; }
+    .workflow-detail { margin-top: 16px; padding: 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .edu-card { padding: 20px; }
+    .edu-card strong { display: block; margin-bottom: 6px; }
+    .cert-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .cert { padding: 11px 12px; border-radius: 15px; border: 1px solid var(--line); background: var(--card-2); color: var(--soft); font-weight: 760; }
+
+    .contact-card { display: grid; grid-template-columns: 1fr auto; gap: 22px; align-items: center; padding: 28px; border: 1px solid var(--line); border-radius: 34px; background: linear-gradient(135deg, rgba(56,232,198,.15), rgba(100,168,255,.10), var(--card)); box-shadow: var(--shadow); }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+
+    .footer { padding: 48px 0 34px; color: var(--muted); text-align: center; }
+
+    .modal, .command { position: fixed; inset: 0; background: rgba(0,0,0,.58); z-index: 50; display: none; align-items: center; justify-content: center; padding: 20px; }
+    .modal.open, .command.open { display: flex; }
+    .modal-card, .command-card { width: min(760px, 100%); max-height: 86vh; overflow: auto; border: 1px solid var(--line); background: var(--bg-2); border-radius: 28px; box-shadow: var(--shadow); padding: 24px; }
+    .modal-top, .command-top { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; margin-bottom: 16px; }
+    .close-btn { border: 1px solid var(--line); color: var(--text); background: var(--card-2); border-radius: 50%; width: 38px; height: 38px; cursor: pointer; }
+    .command-input { width: 100%; border: 1px solid var(--line); background: var(--card-2); color: var(--text); border-radius: 18px; padding: 14px 16px; outline: none; margin-bottom: 14px; }
+    .command-results { display: grid; gap: 8px; }
+    .command-item { padding: 12px 13px; border: 1px solid var(--line); background: var(--card-2); border-radius: 15px; cursor: pointer; }
+    .command-item small { color: var(--muted); display: block; margin-top: 3px; }
+
+    .float-stack { position: fixed; right: 18px; bottom: 18px; z-index: 28; display: grid; gap: 10px; }
+    .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%) translateY(80px); background: var(--text); color: var(--bg); border-radius: 999px; padding: 12px 16px; font-weight: 850; z-index: 70; transition: .25s ease; box-shadow: var(--shadow); }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+
+    .reveal { opacity: 0; transform: translateY(22px); transition: .7s cubic-bezier(.2,.8,.2,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .compact .timeline-content .clean-list li:nth-child(n+5), .compact .project-card p { display: none; }
+    .compact .project-card { min-height: 190px; }
+
+    @media (max-width: 980px) {
+      .hero-grid, .role-grid, .skills-layout, .two-col, .contact-card { grid-template-columns: 1fr; }
+      .project-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .workflow-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+      .nav { display: none; }
+      .menu-btn { display: grid; }
+      .topbar { grid-template-columns: auto auto auto; justify-content: space-between; }
+      .control-deck { grid-template-columns: 1fr; }
+      .section-head { display: block; }
+      .section-actions { justify-content: flex-start; margin-top: 14px; }
     }
 
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+    @media (max-width: 680px) {
+      .hero { padding-top: 112px; }
+      .topbar { top: 8px; border-radius: 22px; }
+      .brand span:last-child { display: none; }
+      .project-grid, .skill-grid, .split-list, .stat-grid, .intel-strip { grid-template-columns: 1fr; }
+      .workflow-grid { grid-template-columns: 1fr; }
+      .timeline::before { left: 18px; }
+      .timeline-btn { padding-left: 54px; }
+      .timeline-btn::before { left: 11px; }
+      .timeline-content { padding-left: 22px; }
+      .timeline-title { display: block; }
     }
 
-    .project-card {
-      border-radius: 23px;
-      padding: 18px;
-      min-height: 310px;
-      display: flex;
-      flex-direction: column;
-      transition: .25s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(87,247,211,.35);
-      background: var(--surface2);
-    }
-
-    .project-meta {
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      margin-bottom: 14px;
-    }
-
-    .project-meta span {
-      border-radius: 999px;
-      padding: 6px 9px;
-      color: #041020;
-      background: linear-gradient(135deg, var(--accent), var(--accent3));
-      font-size: .74rem;
-      font-weight: 950;
-    }
-
-    .project-card h3 {
-      font-size: 1.08rem;
-      line-height: 1.25;
-      margin-bottom: 10px;
-    }
-
-    .project-card p {
-      color: var(--muted);
-      line-height: 1.62;
-      flex: 1;
-      margin-bottom: 14px;
-    }
-
-    .metric-list {
-      color: var(--muted);
-      border-top: 1px solid var(--line);
-      margin-top: 12px;
-      padding-top: 12px;
-      font-size: .84rem;
-      line-height: 1.5;
-    }
-
-    .education-grid {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 18px;
-    }
-
-    .education-list {
-      list-style: none;
-      display: grid;
-      gap: 13px;
-    }
-
-    .education-list li {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.045);
-      border-radius: 18px;
-      padding: 15px;
-    }
-
-    .education-list strong, .education-list span, .education-list em {
-      display: block;
-    }
-
-    .education-list span {
-      color: var(--muted);
-      margin: 6px 0;
-    }
-
-    .education-list em {
-      color: var(--accent);
-      font-style: normal;
-      font-weight: 900;
-      font-size: .88rem;
-    }
-
-    .contact-panel {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 18px;
-      margin-bottom: 44px;
-    }
-
-    .contact-cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .contact-card {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.045);
-      border-radius: 18px;
-      padding: 14px;
-      color: var(--muted);
-      word-break: break-word;
-    }
-
-    .contact-card strong {
-      display: block;
-      color: var(--text);
-      margin-bottom: 5px;
-    }
-
-    .hidden { display: none !important; }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity .65s ease, transform .65s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    footer {
-      color: var(--muted);
-      text-align: center;
-      padding: 30px 0 45px;
-    }
-
-    @media (max-width: 1020px) {
-      .hero, .dashboard-grid, .skill-layout, .education-grid, .contact-panel {
-        grid-template-columns: 1fr;
-      }
-      .metrics, .value-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .skill-side {
-        position: static;
-      }
-    }
-
-    @media (max-width: 720px) {
-      .nav-links a { display: none; }
-      .hero { padding-top: 50px; }
-      .metrics, .value-grid, .skill-grid, .project-grid, .contact-cards {
-        grid-template-columns: 1fr;
-      }
-      .project-toolbar {
-        grid-template-columns: 1fr;
-      }
-      .timeline-main {
-        grid-template-columns: 1fr;
-      }
-      .timeline-main small {
-        width: fit-content;
-      }
-      .role-panel ul {
-        grid-template-columns: 1fr;
-      }
+    @media print {
+      .topbar, .control-deck, .float-stack, .modal, .command, .btn.secondary, .filters, .project-toolbar { display: none !important; }
+      body { background: #fff; color: #111; }
+      .section { padding: 28px 0 0; }
+      .hero { min-height: auto; padding: 30px 0; }
+      .dash-card, .panel, .role-card, .project-card, .timeline-item, .edu-card, .contact-card { box-shadow: none; border-color: #ddd; background: #fff; color: #111; }
+      p, .muted, .timeline-meta, .clean-list { color: #333; }
+      .timeline-content { display: block !important; }
     }
   </style>
 </head>
-<body data-theme="dark">
-  <nav class="nav">
-    <a class="brand" href="#top" aria-label="Go to top">
-      <span class="brand-mark">DA</span>
-      <span>Darcy Awah</span>
-    </a>
-    <div class="nav-links">
-      <a href="#dashboard">Dashboard</a>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar" aria-label="Main navigation">
+    <a class="brand" href="#home" aria-label="Darcy Awah portfolio home"><span class="logo">DA</span><span>Darcy Awah</span></a>
+    <nav class="nav" id="desktopNav">
+      <a href="#summary">Summary</a>
+      <a href="#roles">Roles</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
-      <button class="icon-btn" id="themeBtn" type="button">☾</button>
+    </nav>
+    <div class="top-actions">
+      <button class="icon-btn" id="commandOpen" title="Open command palette" aria-label="Open command palette">⌘</button>
+      <button class="icon-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">☾</button>
+      <button class="icon-btn menu-btn" id="menuToggle" title="Menu" aria-label="Open menu">☰</button>
     </div>
-  </nav>
+  </header>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation"></nav>
 
-  <main class="container" id="top">
-    <section class="hero">
-      <div>
-        <div class="eyebrow"><span class="pulse"></span>Professional Data Portfolio</div>
-        <h1><span class="gradient">Darcy Awah Achunguh</span></h1>
-        <p class="lead">Data professional with experience across machine learning, predictive modeling, SQL analytics, business intelligence, data visualization, data validation, and scalable data workflows. Skilled in Python, SQL, Power BI, Azure Machine Learning, Databricks, PySpark, Scikit-learn, SHAP, and KPI reporting. Able to transform raw data into trusted datasets, explainable models, dashboards, and business recommendations for technical and non-technical stakeholders.</p>
-        <div class="role-tabs" id="heroTabs" aria-label="Role focus tabs">
-          <button class="role-tab active" data-role="Data Science">Data Science</button>
-          <button class="role-tab" data-role="Data Analysis">Data Analysis</button>
-          <button class="role-tab" data-role="Data Engineering">Data Engineering</button>
-        </div>
-        <div class="hero-actions">
-          <a class="cta primary" href="#projects">View Portfolio Projects</a>
-          <a class="cta" href="mailto:awahdarcy@gmail.com">Email Darcy</a>
-          <a class="cta" href="#dashboard">Open Interactive Dashboard</a>
-        </div>
-      </div>
-
-      <aside class="profile-console reveal">
-        <div class="console-head">
-          <div class="console-title">
-            <strong>Data Scientist | Data Analyst | Data Engineer</strong>
-            <span>Toronto / North York, Ontario, Canada</span>
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="badge-row">
+            <span class="badge"><span class="pulse-dot"></span>Open to Data Science, Analytics & Data Engineering roles</span>
+            <span class="badge">Toronto, Ontario</span>
+            <span class="badge">Portfolio: darcyawah.github.io</span>
           </div>
-          <span class="status-pill"><span class="pulse"></span>Available Profile</span>
+          <h1>Turning complex data into <span class="gradient-text">models, dashboards & decisions.</span></h1>
+          <p class="lead">Data Scientist, Data Analyst, and Data Engineer with hands-on experience across machine learning, predictive modeling, SQL, Python, Power BI, Azure Machine Learning, Databricks, PySpark, SHAP, and business analytics.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">Explore Projects</a>
+            <a class="btn secondary" href="#experience">View Experience</a>
+            <button class="btn secondary" id="printBtn">Print / Save PDF</button>
+          </div>
+          <div class="availability">
+            <span><strong>Email:</strong> <a href="mailto:awahdarcy@gmail.com">awahdarcy@gmail.com</a></span>
+            <span><strong>Phone:</strong> <a href="tel:+16478083391">(647) 808-3391</a></span>
+            <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/darcy-awah" target="_blank" rel="noreferrer">darcy-awah</a></span>
+          </div>
+          <div class="control-deck" aria-label="Profile controls">
+            <label class="search-box" for="globalSearch"><input id="globalSearch" type="search" placeholder="Search skills, projects, experience..." autocomplete="off" /><span>⌕</span></label>
+            <div class="segmented" id="roleTabs" role="tablist" aria-label="Role focus tabs"></div>
+            <button class="btn secondary" id="densityToggle">Compact View</button>
+          </div>
         </div>
-
-        <div class="code-card">
-          <div>candidate = <span>"Darcy Awah"</span></div>
-          <div>specialties = [<span>"ML"</span>, <span>"BI"</span>, <span>"Data Pipelines"</span>]</div>
-          <div>stack = [<span>"Python"</span>, <span>"SQL"</span>, <span>"Power BI"</span>, <span>"PySpark"</span>]</div>
-          <div>approach = <span>"data → insight → model → impact"</span></div>
-        </div>
-
-        <div class="role-panel" id="rolePanel">
-          <h3>Data Science</h3>
-          <p>Builds predictive models, evaluates performance, explains model behavior, and turns results into recommendations.</p>
-          <ul>
-            <li>Classification</li>
-            <li>Regression</li>
-            <li>Forecasting</li>
-            <li>SHAP explainability</li>
-          </ul>
-        </div>
-      </aside>
-    </section>
-
-    <section class="metrics" aria-label="Key profile metrics">
-      
-<div class="metric-card reveal">
-  <div class="metric-value" data-target="4" data-display="4+">0</div>
-  <p>Years across analytics, BI and ML</p>
-</div>
-
-<div class="metric-card reveal">
-  <div class="metric-value" data-target="7" data-display="7">0</div>
-  <p>Portfolio projects</p>
-</div>
-
-<div class="metric-card reveal">
-  <div class="metric-value" data-target="35" data-display="35+">0</div>
-  <p>Core technical skills</p>
-</div>
-
-<div class="metric-card reveal">
-  <div class="metric-value" data-target="3" data-display="3">0</div>
-  <p>Target career tracks</p>
-</div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <h2>Positioning</h2>
-        <p>A professional profile designed to present Darcy as a strong candidate across Data Science, Data Analyst, and Data Engineer roles.</p>
-      </div>
-      <div class="value-grid">
-        
-<div class="value-card reveal">
-  <span>01</span>
-  <h3>Predictive Modeling</h3>
-  <p>Classification, regression, forecasting, cross-validation, tuning, and explainable AI.</p>
-</div>
-
-<div class="value-card reveal">
-  <span>02</span>
-  <h3>Business Intelligence</h3>
-  <p>Executive dashboards, KPI reporting, stakeholder insights, and visual storytelling.</p>
-</div>
-
-<div class="value-card reveal">
-  <span>03</span>
-  <h3>Data Engineering</h3>
-  <p>SQL pipelines, ETL/ELT, validation, PySpark, Databricks, and Lakehouse analytics.</p>
-</div>
-
-<div class="value-card reveal">
-  <span>04</span>
-  <h3>Model Explainability</h3>
-  <p>SHAP, feature importance, model documentation, governance, and business interpretation.</p>
-</div>
+        <aside class="dash-card reveal" aria-label="Profile intelligence dashboard">
+          <div class="dash-inner">
+            <div class="mini-header"><strong>Interactive Profile Intelligence</strong><span class="status-pill">Role-aware dashboard</span></div>
+            <div class="canvas-panel"><canvas id="heroRadar" width="520" height="330" aria-label="Role strength radar chart"></canvas></div>
+            <div class="role-signal" id="profileSignal"></div>
+            <div class="intel-strip" id="profileIntel"></div>
+            <div class="intel-keywords" id="profileKeywords"></div>
+            <div class="stat-grid" id="heroStats"></div>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section class="section" id="dashboard">
-      <div class="section-head">
-        <h2>Interactive Dashboard</h2>
-        <p>Hover the charts to explore role strengths, skill coverage, and project distribution across analytics, machine learning, and engineering.</p>
-      </div>
-
-      <div class="dashboard-grid">
-        <div class="panel reveal">
-          <h3>Role strength profile</h3>
-          <p class="panel-sub">A visual summary of the strongest areas across data science, analytics, engineering, and governance.</p>
-          <div class="chart" id="roleBarChart"></div>
+    <section class="section" id="summary">
+      <div class="container reveal">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Professional summary</div>
+            <h2>A practical data professional focused on measurable business value.</h2>
+          </div>
+          <p>Darcy builds end-to-end data science solutions from data collection, cleaning, EDA, feature engineering, modeling, evaluation, explainability, and insight generation through to stakeholder-ready dashboards and recommendations.</p>
         </div>
-        <div class="panel reveal">
-          <h3>Project track mix</h3>
-          <p class="panel-sub">Project portfolio coverage by professional track.</p>
-          <div class="chart" id="projectDonutChart"></div>
+        <div class="two-col">
+          <div class="panel">
+            <h3>What I bring</h3>
+            <ul class="clean-list">
+              <li>Machine learning workflows for classification, regression, forecasting, segmentation, risk analysis, and performance improvement.</li>
+              <li>Strong SQL for extraction, transformation, validation, joins, CTEs, aggregations, subqueries, and window functions.</li>
+              <li>Power BI dashboards and KPI reports that improve reporting efficiency and stakeholder visibility.</li>
+              <li>Model explainability using SHAP, LIME, feature importance, and business-friendly interpretation.</li>
+              <li>Cloud and scalable analytics exposure with Azure Machine Learning, Databricks, Spark, PySpark, and Lakehouse concepts.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Profile snapshot</h3>
+            <div class="tool-cloud" id="snapshotTags"></div>
+            <div class="canvas-panel" style="margin-top:16px; min-height:240px"><canvas id="mixChart" width="520" height="240" aria-label="Portfolio mix chart"></canvas></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roles">
+      <div class="container reveal">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Role fit</div>
+            <h2>One profile, three high-demand data paths.</h2>
+          </div>
+          <p>Use the role switcher to see how the same experience supports Data Scientist, Data Analyst, and Data Engineer opportunities.</p>
+        </div>
+        <div class="role-grid">
+          <article class="role-card" id="roleCard"></article>
+          <aside class="panel">
+            <div class="chart-title"><strong>Role capability map</strong><span class="muted" id="roleChartLabel">Interactive</span></div>
+            <div class="canvas-panel"><canvas id="roleBar" width="620" height="360" aria-label="Role capability bar chart"></canvas></div>
+          </aside>
         </div>
       </div>
     </section>
 
     <section class="section" id="skills">
-      <div class="section-head">
-        <h2>Technical Skills</h2>
-        <p>Filter the skill library by category, select key skills, and use the chart to quickly understand the strongest capability areas.</p>
-      </div>
-
-      <div class="dashboard-grid" style="margin-bottom:18px;">
-        <div class="panel reveal">
-          <h3>Skill category depth</h3>
-          <p class="panel-sub">Number of skills listed in each category from the resume.</p>
-          <div class="chart" id="skillDepthChart"></div>
+      <div class="container reveal">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Technical skills</div>
+            <h2>Tools for analytics, ML, BI, and scalable data workflows.</h2>
+          </div>
+          <p>Filter by domain or search above to highlight the strongest tools, delivery capabilities, and job-aligned competencies for each data role.</p>
         </div>
-        <div class="panel reveal">
-          <h3>Professional focus</h3>
-          <p class="panel-sub">Click the filters below to focus the profile on Data Science, Data Analysis, or Data Engineering.</p>
-          <div id="focusSummary"></div>
-        </div>
-      </div>
-
-      <div class="skill-layout">
-        <aside class="skill-side reveal">
-          <h3>Filter skills</h3>
-          <button class="filter-btn active" data-skill-filter="all">All Skills</button>
-          <button class="filter-btn" data-skill-filter="Programming &amp; Analytics">Programming &amp; Analytics</button><button class="filter-btn" data-skill-filter="Machine Learning">Machine Learning</button><button class="filter-btn" data-skill-filter="MLOps">MLOps</button><button class="filter-btn" data-skill-filter="Visualization &amp; BI">Visualization &amp; BI</button><button class="filter-btn" data-skill-filter="Cloud &amp; Big Data">Cloud &amp; Big Data</button><button class="filter-btn" data-skill-filter="Databases &amp; Engineering">Databases &amp; Engineering</button><button class="filter-btn" data-skill-filter="Explainability">Explainability</button><button class="filter-btn" data-skill-filter="Governance &amp; Business">Governance &amp; Business</button>
-        </aside>
-        <div class="skill-grid" id="skillGrid">
-          
-    <article class="skill-card reveal" data-skill-category="Programming &amp; Analytics">
-      <header>
-        <h3>Programming &amp; Analytics</h3>
-        <strong>6</strong>
-      </header>
-      <div class="chip-wrap">
-        <button class="chip" data-chip="python">Python</button><button class="chip" data-chip="sql">SQL</button><button class="chip" data-chip="pandas">Pandas</button><button class="chip" data-chip="numpy">NumPy</button><button class="chip" data-chip="scikit-learn">Scikit-learn</button><button class="chip" data-chip="jupyter notebook">Jupyter Notebook</button>
-      </div>
-    </article>
-    
-    <article class="skill-card reveal" data-skill-category="Machine Learning">
-      <header>
-        <h3>Machine Learning</h3>
-        <strong>7</strong>
-      </header>
-      <div class="chip-wrap">
-        <button class="chip" data-chip="predictive modeling">Predictive Modeling</button><button class="chip" data-chip="classification">Classification</button><button class="chip" data-chip="regression">Regression</button><button class="chip" data-chip="forecasting">Forecasting</button><button class="chip" data-chip="feature engineering">Feature Engineering</button><button class="chip" data-chip="model evaluation">Model Evaluation</button><button class="chip" data-chip="model validation">Model Validation</button>
-      </div>
-    </article>
-    
-    <article class="skill-card reveal" data-skill-category="MLOps">
-      <header>
-        <h3>MLOps</h3>
-        <strong>9</strong>
-      </header>
-      <div class="chip-wrap">
-        <button class="chip" data-chip="mlflow">MLflow</button><button class="chip" data-chip="model deployment">Model Deployment</button><button class="chip" data-chip="model monitoring">Model Monitoring</button><button class="chip" data-chip="model drift">Model Drift</button><button class="chip" data-chip="data drift">Data Drift</button><button class="chip" data-chip="model versioning">Model Versioning</button><button class="chip" data-chip="experiment tracking">Experiment Tracking</button><button class="chip" data-chip="pipeline automation">Pipeline Automation</button><button class="chip" data-chip="performance monitoring">Performance Monitoring</button>
-      </div>
-    </article>
-    
-    <article class="skill-card reveal" data-skill-category="Visualization &amp; BI">
-      <header>
-        <h3>Visualization &amp; BI</h3>
-        <strong>6</strong>
-      </header>
-      <div class="chip-wrap">
-        <button class="chip" data-chip="power bi">Power BI</button><button class="chip" data-chip="tableau">Tableau</button><button class="chip" data-chip="matplotlib">Matplotlib</button><button class="chip" data-chip="seaborn">Seaborn</button><button class="chip" data-chip="kpi dashboards">KPI Dashboards</button><button class="chip" data-chip="executive reporting">Executive Reporting</button>
-      </div>
-    </article>
-    
-    <article class="skill-card reveal" data-skill-category="Cloud &amp; Big Data">
-      <header>
-        <h3>Cloud &amp; Big Data</h3>
-        <strong>6</strong>
-      </header>
-      <div class="chip-wrap">
-        <button class="chip" data-chip="azure machine learning">Azure Machine Learning</button><button class="chip" data-chip="azure analytics">Azure Analytics</button><button class="chip" data-chip="databricks">Databricks</button><button class="chip" data-chip="apache spark">Apache Spark</button><button class="chip" data-chip="pyspark">PySpark</button><button class="chip" data-chip="lakehouse architecture">Lakehouse Architecture</button>
-      </div>
-    </article>
-    
-    <article class="skill-card reveal" data-skill-category="Databases &amp; Engineering">
-      <header>
-        <h3>Databases &amp; Engineering</h3>
-        <strong>6</strong>
-      </header>
-      <div class="chip-wrap">
-        <button class="chip" data-chip="postgresql">PostgreSQL</button><button class="chip" data-chip="etl/elt">ETL/ELT</button><button class="chip" data-chip="data pipelines">Data Pipelines</button><button class="chip" data-chip="data cleaning">Data Cleaning</button><button class="chip" data-chip="data transformation">Data Transformation</button><button class="chip" data-chip="data validation">Data Validation</button>
-      </div>
-    </article>
-    
-    <article class="skill-card reveal" data-skill-category="Explainability">
-      <header>
-        <h3>Explainability</h3>
-        <strong>4</strong>
-      </header>
-      <div class="chip-wrap">
-        <button class="chip" data-chip="shap">SHAP</button><button class="chip" data-chip="lime">LIME</button><button class="chip" data-chip="feature importance">Feature Importance</button><button class="chip" data-chip="model interpretation">Model Interpretation</button>
-      </div>
-    </article>
-    
-    <article class="skill-card reveal" data-skill-category="Governance &amp; Business">
-      <header>
-        <h3>Governance &amp; Business</h3>
-        <strong>9</strong>
-      </header>
-      <div class="chip-wrap">
-        <button class="chip" data-chip="data quality">Data Quality</button><button class="chip" data-chip="data governance">Data Governance</button><button class="chip" data-chip="data security">Data Security</button><button class="chip" data-chip="model documentation">Model Documentation</button><button class="chip" data-chip="compliance">Compliance</button><button class="chip" data-chip="stakeholder collaboration">Stakeholder Collaboration</button><button class="chip" data-chip="requirements gathering">Requirements Gathering</button><button class="chip" data-chip="process improvement">Process Improvement</button><button class="chip" data-chip="communication">Communication</button>
-      </div>
-    </article>
-    
+        <div class="filters" id="skillFilters"></div>
+        <div class="skills-layout">
+          <div class="skill-grid" id="skillGrid"></div>
+          <aside class="panel">
+            <div class="chart-title"><strong>Skill Depth by Domain</strong><span class="muted">Filter, compare, and scan strengths</span></div>
+            <div class="canvas-panel"><canvas id="skillRadar" width="520" height="420" aria-label="Skill radar chart"></canvas></div>
+            <div class="domain-insights" id="domainInsights"></div>
+            <div class="domain-detail" id="domainDetail"></div>
+            <div class="tool-cloud" id="toolCloud"></div>
+          </aside>
         </div>
       </div>
     </section>
 
     <section class="section" id="experience">
-      <div class="section-head">
-        <h2>Experience</h2>
-        <p>Click each role to expand responsibilities and achievements. The timeline demonstrates progression across BI, analytics, and machine learning.</p>
-      </div>
-      <div class="timeline" id="timeline">
-        
-    <article class="timeline-item reveal open" data-track="Data Science">
-      <button class="timeline-main" aria-expanded="true">
-        <span class="timeline-dot"></span>
-        <span class="timeline-date">Nov 2025 – Jul 2026</span>
-        <span>
-          <strong>Data Scientist / Data Science and Applications</strong>
-          <em>Metro College of Technology · Toronto, Ontario</em>
-        </span>
-        <small>Data Science</small>
-      </button>
-      <div class="timeline-panel">
-        <p>Completed applied data science projects covering machine learning, regression, classification, model evaluation, dashboard reporting, and analytics storytelling.</p>
-        <ul><li>Built end-to-end workflows using Python, SQL, Pandas, NumPy, Scikit-learn, XGBoost, LightGBM, and SHAP.</li><li>Prepared structured datasets using missing-value handling, outlier treatment, feature engineering, encoding, scaling, and validation checks.</li><li>Evaluated models using train-test split, K-fold cross-validation, hyperparameter tuning, F1-score, ROC-AUC, RMSE, R², and MAPE.</li></ul>
-        <div class="achievement"><strong>Achievement:</strong> Delivered portfolio-ready projects aligned with senior data science requirements in Python, SQL, ML, explainability, and business analytics.</div>
-      </div>
-    </article>
-    
-    <article class="timeline-item reveal " data-track="Data Analysis">
-      <button class="timeline-main" aria-expanded="false">
-        <span class="timeline-dot"></span>
-        <span class="timeline-date">Feb 2025 – Dec 2025</span>
-        <span>
-          <strong>Data Analyst</strong>
-          <em>Sun Life Financial · Toronto, Ontario</em>
-        </span>
-        <small>Data Analysis</small>
-      </button>
-      <div class="timeline-panel">
-        <p>Analyzed financial, operational, and customer datasets to support reporting, performance monitoring, and decision-making.</p>
-        <ul><li>Wrote complex SQL queries using joins, CTEs, aggregations, subqueries, and window functions across multiple enterprise systems.</li><li>Developed Power BI dashboards and KPI reports to monitor business performance, operational trends, service issues, and key metrics.</li><li>Documented data definitions, SQL logic, validation rules, dashboard requirements, and reporting assumptions.</li></ul>
-        <div class="achievement"><strong>Achievement:</strong> Improved reporting efficiency and stakeholder visibility through reusable SQL scripts, dashboards, and validation checks.</div>
-      </div>
-    </article>
-    
-    <article class="timeline-item reveal " data-track="Data Science">
-      <button class="timeline-main" aria-expanded="false">
-        <span class="timeline-dot"></span>
-        <span class="timeline-date">Jan 2024 – Jan 2025</span>
-        <span>
-          <strong>Data Analyst</strong>
-          <em>USAA Federal Savings Bank · San Antonio, Texas</em>
-        </span>
-        <small>Data Science</small>
-      </button>
-      <div class="timeline-panel">
-        <p>Supported banking analytics, risk analysis, reporting, and operational decision-making through SQL, Python, dashboards, and predictive modeling.</p>
-        <ul><li>Built classification and regression models with feature engineering, model training, testing, evaluation, and comparison.</li><li>Used SQL to extract, clean, join, transform, and validate banking and customer datasets from structured data sources.</li><li>Applied SHAP and feature importance methods to explain predictions and identify key drivers behind customer behavior.</li></ul>
-        <div class="achievement"><strong>Achievement:</strong> Reduced manual reporting work and improved model transparency using reusable SQL, dashboard templates, and explainable AI.</div>
-      </div>
-    </article>
-    
-    <article class="timeline-item reveal " data-track="Data Analysis">
-      <button class="timeline-main" aria-expanded="false">
-        <span class="timeline-dot"></span>
-        <span class="timeline-date">Oct 2022 – Dec 2023</span>
-        <span>
-          <strong>Data Analyst / Business Intelligence Analyst</strong>
-          <em>Guinness Cameroon S.A. · Cameroon</em>
-        </span>
-        <small>Data Analysis</small>
-      </button>
-      <div class="timeline-panel">
-        <p>Analyzed sales, distribution, inventory, and customer data to support forecasting, performance monitoring, and management decisions.</p>
-        <ul><li>Designed Power BI dashboards to track sales performance, product trends, regional performance, inventory movement, and KPIs.</li><li>Used SQL and Excel to clean, transform, validate, and summarize large business datasets.</li><li>Performed exploratory analysis to identify sales trends, demand patterns, customer behavior, and operational performance gaps.</li></ul>
-        <div class="achievement"><strong>Achievement:</strong> Improved reporting efficiency by replacing manual spreadsheet tracking with structured KPI dashboards and cleaner data processes.</div>
-      </div>
-    </article>
-    
+      <div class="container reveal">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Professional experience</div>
+            <h2>Experience with analytics delivery, model development, and business reporting.</h2>
+          </div>
+          <div class="section-actions">
+            <button class="chip active" id="expandAll">Expand all</button>
+            <button class="chip" id="collapseAll">Collapse all</button>
+          </div>
+        </div>
+        <div class="timeline" id="experienceTimeline"></div>
       </div>
     </section>
 
     <section class="section" id="projects">
-      <div class="section-head">
-        <h2>Project Portfolio</h2>
-        <p>Search and filter portfolio projects by role track or tool. Projects support senior-level positioning across modeling, analytics, explainability, and data pipelines.</p>
+      <div class="container reveal">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Selected projects</div>
+            <h2>Portfolio-ready projects with business context and explainability.</h2>
+          </div>
+          <p>Filter projects by focus area. Each card opens into a detailed view with objectives, techniques, metrics, and tools.</p>
+        </div>
+        <div class="project-toolbar">
+          <div class="filters" id="projectFilters"></div>
+          <span class="muted" id="projectCount"></span>
+        </div>
+        <div class="project-grid" id="projectGrid"></div>
       </div>
+    </section>
 
-      <div class="project-toolbar reveal">
-        <input id="projectSearch" type="search" placeholder="Search by project, tool, metric, or keyword..." />
-        <select id="trackFilter">
-          <option value="all">All tracks</option>
-          <option value="Data Science">Data Science</option>
-          <option value="Data Analysis">Data Analysis</option>
-          <option value="Data Engineering">Data Engineering</option>
-        </select>
-        <select id="typeFilter">
-          <option value="all">All project types</option>
-          <option value="Classification">Classification</option><option value="Data Pipeline">Data Pipeline</option><option value="Explainable AI">Explainable AI</option><option value="Forecasting">Forecasting</option><option value="NLP">NLP</option><option value="Regression">Regression</option>
-        </select>
-      </div>
-
-      <div class="project-grid" id="projectGrid">
-        
-    <article class="project-card reveal" data-track="Data Science" data-type="Classification" data-search="customer churn prediction and retention analytics predicted churn risk and used shap to identify the top drivers behind customer behavior. python pandas scikit-learn random forest xgboost lightgbm shap f1-score roc-auc pr-auc precision recall">
-      <div class="project-meta">
-        <span>Data Science</span>
-        <span>Classification</span>
-      </div>
-      <h3>Customer Churn Prediction and Retention Analytics</h3>
-      <p>Predicted churn risk and used SHAP to identify the top drivers behind customer behavior.</p>
-      <div class="tool-list"><button>Python</button><button>Pandas</button><button>Scikit-learn</button><button>Random Forest</button><button>XGBoost</button><button>LightGBM</button><button>SHAP</button></div>
-      <div class="metric-list"><strong>Metrics:</strong> F1-score, ROC-AUC, PR-AUC, Precision, Recall</div>
-    </article>
-    
-    <article class="project-card reveal" data-track="Data Science" data-type="Classification" data-search="bank marketing response prediction predicted term-deposit subscription using campaign and customer profile data with tuning and threshold optimization. python sql scikit-learn xgboost lightgbm tensorflow/keras shap f1-score roc-auc pr-auc confusion matrix">
-      <div class="project-meta">
-        <span>Data Science</span>
-        <span>Classification</span>
-      </div>
-      <h3>Bank Marketing Response Prediction</h3>
-      <p>Predicted term-deposit subscription using campaign and customer profile data with tuning and threshold optimization.</p>
-      <div class="tool-list"><button>Python</button><button>SQL</button><button>Scikit-learn</button><button>XGBoost</button><button>LightGBM</button><button>TensorFlow/Keras</button><button>SHAP</button></div>
-      <div class="metric-list"><strong>Metrics:</strong> F1-score, ROC-AUC, PR-AUC, Confusion Matrix</div>
-    </article>
-    
-    <article class="project-card reveal" data-track="Data Science" data-type="Regression" data-search="house price prediction with regression and explainable ai compared regression models and used explainability to identify key drivers of house prices. python ridge lasso random forest xgboost lightgbm shap mae rmse r² adjusted r² mape">
-      <div class="project-meta">
-        <span>Data Science</span>
-        <span>Regression</span>
-      </div>
-      <h3>House Price Prediction with Regression and Explainable AI</h3>
-      <p>Compared regression models and used explainability to identify key drivers of house prices.</p>
-      <div class="tool-list"><button>Python</button><button>Ridge</button><button>Lasso</button><button>Random Forest</button><button>XGBoost</button><button>LightGBM</button><button>SHAP</button></div>
-      <div class="metric-list"><strong>Metrics:</strong> MAE, RMSE, R², Adjusted R², MAPE</div>
-    </article>
-    
-    <article class="project-card reveal" data-track="Data Engineering" data-type="Data Pipeline" data-search="databricks lakehouse analytics and pyspark data pipeline designed scalable ingestion, transformation, cleaning, and dashboard-ready data workflows. databricks pyspark spark sql python sql delta lake power bi data quality pipeline validation dashboard readiness">
-      <div class="project-meta">
-        <span>Data Engineering</span>
-        <span>Data Pipeline</span>
-      </div>
-      <h3>Databricks Lakehouse Analytics and PySpark Data Pipeline</h3>
-      <p>Designed scalable ingestion, transformation, cleaning, and dashboard-ready data workflows.</p>
-      <div class="tool-list"><button>Databricks</button><button>PySpark</button><button>Spark SQL</button><button>Python</button><button>SQL</button><button>Delta Lake</button><button>Power BI</button></div>
-      <div class="metric-list"><strong>Metrics:</strong> Data Quality, Pipeline Validation, Dashboard Readiness</div>
-    </article>
-    
-    <article class="project-card reveal" data-track="Data Science" data-type="Explainable AI" data-search="health analytics and model explainability with shap built a predictive workflow and communicated model logic, assumptions, risk drivers, and limitations. python pandas scikit-learn xgboost lightgbm shap precision recall f1-score roc-auc">
-      <div class="project-meta">
-        <span>Data Science</span>
-        <span>Explainable AI</span>
-      </div>
-      <h3>Health Analytics and Model Explainability with SHAP</h3>
-      <p>Built a predictive workflow and communicated model logic, assumptions, risk drivers, and limitations.</p>
-      <div class="tool-list"><button>Python</button><button>Pandas</button><button>Scikit-learn</button><button>XGBoost</button><button>LightGBM</button><button>SHAP</button></div>
-      <div class="metric-list"><strong>Metrics:</strong> Precision, Recall, F1-score, ROC-AUC</div>
-    </article>
-    
-    <article class="project-card reveal" data-track="Data Science" data-type="NLP" data-search="nlp text classification and sentiment analysis classified feedback and support messages into business categories and sentiment groups. python pandas scikit-learn nltk tf-idf xgboost power bi accuracy precision recall f1-score">
-      <div class="project-meta">
-        <span>Data Science</span>
-        <span>NLP</span>
-      </div>
-      <h3>NLP Text Classification and Sentiment Analysis</h3>
-      <p>Classified feedback and support messages into business categories and sentiment groups.</p>
-      <div class="tool-list"><button>Python</button><button>Pandas</button><button>Scikit-learn</button><button>NLTK</button><button>TF-IDF</button><button>XGBoost</button><button>Power BI</button></div>
-      <div class="metric-list"><strong>Metrics:</strong> Accuracy, Precision, Recall, F1-score</div>
-    </article>
-    
-    <article class="project-card reveal" data-track="Data Analysis" data-type="Forecasting" data-search="time-series forecasting for sales or demand prediction built lag, rolling-average, seasonality, trend, and date features to predict demand and present forecasts. python pandas statsmodels xgboost lightgbm power bi mae rmse mape backtesting">
-      <div class="project-meta">
-        <span>Data Analysis</span>
-        <span>Forecasting</span>
-      </div>
-      <h3>Time-Series Forecasting for Sales or Demand Prediction</h3>
-      <p>Built lag, rolling-average, seasonality, trend, and date features to predict demand and present forecasts.</p>
-      <div class="tool-list"><button>Python</button><button>Pandas</button><button>Statsmodels</button><button>XGBoost</button><button>LightGBM</button><button>Power BI</button></div>
-      <div class="metric-list"><strong>Metrics:</strong> MAE, RMSE, MAPE, Backtesting</div>
-    </article>
-    
+    <section class="section" id="workflow">
+      <div class="container reveal">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Delivery workflow</div>
+            <h2>From raw data to production-ready insight.</h2>
+          </div>
+          <p>A structured approach for solving real-world business problems with data science, analytics, and engineering methods.</p>
+        </div>
+        <div class="workflow-grid" id="workflowGrid"></div>
+        <div class="workflow-detail" id="workflowDetail"></div>
       </div>
     </section>
 
     <section class="section" id="education">
-      <div class="section-head">
-        <h2>Education & Training</h2>
-        <p>Academic background and professional training areas that support data science, analytics, cloud, and engineering roles.</p>
-      </div>
-      <div class="education-grid">
-        <div class="panel reveal">
-          <h3>Education</h3>
-          <ul class="education-list">
-<li class="reveal">
-  <strong>Advanced Diploma in Data Science and Applications</strong>
-  <span>Metro College of Technology · Toronto, Ontario</span>
-  <em>Nov 2025 – Jul 2026</em>
-</li>
-
-<li class="reveal">
-  <strong>Master’s in Business Administration</strong>
-  <span>Siam University · Bangkok, Thailand</span>
-  <em>Aug 2017 – Jun 2019</em>
-</li>
-
-<li class="reveal">
-  <strong>Bachelor’s in Economics</strong>
-  <span>University of Buea · Buea, Cameroon</span>
-  <em>Oct 2009 – Jun 2012</em>
-</li></ul>
+      <div class="container reveal">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Education & certifications</div>
+            <h2>Formal business foundation plus applied data science training.</h2>
+          </div>
         </div>
-        <div class="panel reveal">
-          <h3>Certifications & Training</h3>
-          <p class="panel-sub">Relevant training aligned with modern analytics, machine learning, business intelligence, and cloud data workflows.</p>
-          <div class="cert-list"><span>Data Science and Applications</span><span>Machine Learning with Python</span><span>SQL for Data Analysis</span><span>Power BI Dashboard Development</span><span>Azure Machine Learning</span><span>Databricks and PySpark Fundamentals</span><span>Model Explainability with SHAP</span><span>Data Visualization and Business Intelligence</span></div>
+        <div class="two-col">
+          <div class="edu-card">
+            <h3>Education</h3>
+            <div id="educationList"></div>
+          </div>
+          <div class="edu-card">
+            <h3>Certifications & training</h3>
+            <div class="cert-grid" id="certGrid"></div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="contact">
-      <div class="contact-panel">
-        <div class="panel reveal">
-          <h2 style="font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.06em;margin-bottom:12px;">Let’s connect</h2>
-          <p class="lead">Open to roles involving data science, analytics, machine learning, business intelligence, SQL reporting, data engineering, and cloud-based data workflows.</p>
-          <div class="contact-cards">
-            <div class="contact-card"><strong>Email</strong>awahdarcy@gmail.com</div>
-            <div class="contact-card"><strong>Phone</strong>(647) 808-3391</div>
-            <div class="contact-card"><strong>LinkedIn</strong>www.linkedin.com/in/darcy-awah</div>
-            <div class="contact-card"><strong>Portfolio</strong>darcyawah.github.io</div>
+      <div class="container reveal">
+        <div class="contact-card">
+          <div>
+            <div class="eyebrow">Contact</div>
+            <h2>Let’s connect on data science, analytics, or data engineering opportunities.</h2>
+            <p>Available for roles involving machine learning, SQL analytics, Power BI dashboards, cloud data workflows, Databricks, PySpark, model explainability, and stakeholder-facing insight delivery.</p>
+            <div class="contact-links">
+              <a class="btn primary" href="mailto:awahdarcy@gmail.com">Email Darcy</a>
+              <button class="btn secondary" id="copyEmail">Copy Email</button>
+              <a class="btn secondary" href="https://www.linkedin.com/in/darcy-awah" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a class="btn secondary" href="https://darcyawah.github.io" target="_blank" rel="noreferrer">GitHub Portfolio</a>
+            </div>
           </div>
-        </div>
-        <div class="panel reveal">
-          <h3>Profile fit</h3>
-          <p class="panel-sub">Best-fit job titles for this profile.</p>
-          <div class="cert-list">
-            <span>Data Scientist</span>
-            <span>Senior Data Analyst</span>
-            <span>Data Engineer</span>
-            <span>BI Analyst</span>
-            <span>Machine Learning Analyst</span>
-            <span>Analytics Engineer</span>
-            <span>SQL Data Analyst</span>
-            <span>Power BI Developer</span>
+          <div class="panel">
+            <strong>Core positioning</strong>
+            <p style="margin:10px 0 0">Data Scientist | Data Analyst | Data Engineer</p>
+            <div class="tool-cloud" style="margin-top:14px"><span class="tool-tag">Python</span><span class="tool-tag">SQL</span><span class="tool-tag">Power BI</span><span class="tool-tag">ML</span><span class="tool-tag">Databricks</span><span class="tool-tag">PySpark</span><span class="tool-tag">SHAP</span></div>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <div class="chart-tooltip" id="tooltip"></div>
+  <footer class="footer container">© <span id="year"></span> Darcy Awah Achunguh.</footer>
 
-  <footer class="container">
-    <p>© 2026 Darcy Awah Achunguh.</p>
-  </footer>
+  <div class="float-stack">
+    <button class="icon-btn" id="topBtn" title="Back to top" aria-label="Back to top">↑</button>
+    <button class="icon-btn" id="commandOpen2" title="Search portfolio" aria-label="Search portfolio">⌕</button>
+  </div>
+  <div class="toast" id="toast">Copied</div>
+
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-top">
+        <div><div class="eyebrow" id="modalType"></div><h2 id="modalTitle"></h2></div>
+        <button class="close-btn" id="modalClose" aria-label="Close project details">×</button>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="command" id="commandPalette" aria-hidden="true">
+    <div class="command-card" role="dialog" aria-modal="true" aria-labelledby="commandTitle">
+      <div class="command-top">
+        <div><div class="eyebrow">Command palette</div><h2 id="commandTitle">Search the portfolio</h2></div>
+        <button class="close-btn" id="commandClose" aria-label="Close command palette">×</button>
+      </div>
+      <input class="command-input" id="commandInput" placeholder="Try Python, SHAP, Power BI, USAA, churn..." />
+      <div class="command-results" id="commandResults"></div>
+    </div>
+  </div>
 
   <script>
-    const roleStrengths = [{"role": "Data Science", "score": 94, "items": ["Machine learning", "Predictive modeling", "SHAP", "Model evaluation", "Feature engineering"]}, {"role": "Data Analysis", "score": 96, "items": ["SQL", "Power BI", "KPI dashboards", "EDA", "Stakeholder reporting"]}, {"role": "Data Engineering", "score": 88, "items": ["ETL/ELT", "PySpark", "Databricks", "PostgreSQL", "Data validation"]}, {"role": "MLOps & Governance", "score": 82, "items": ["MLflow", "Model monitoring", "Model drift", "Documentation", "Compliance"]}];
-    const skillCounts = [{"category": "Programming & Analytics", "count": 6}, {"category": "Machine Learning", "count": 7}, {"category": "MLOps", "count": 9}, {"category": "Visualization & BI", "count": 6}, {"category": "Cloud & Big Data", "count": 6}, {"category": "Databases & Engineering", "count": 6}, {"category": "Explainability", "count": 4}, {"category": "Governance & Business", "count": 9}];
-    const trackMix = [{"track": "Data Science", "count": 5}, {"track": "Data Engineering", "count": 1}, {"track": "Data Analysis", "count": 1}];
-    const projectMix = [{"type": "Classification", "count": 2}, {"type": "Regression", "count": 1}, {"type": "Data Pipeline", "count": 1}, {"type": "Explainable AI", "count": 1}, {"type": "NLP", "count": 1}, {"type": "Forecasting", "count": 1}];
-
-    const roleContent = {
-      "Data Science": {
-        title: "Data Science",
-        desc: "Builds predictive models, evaluates performance, explains model behavior, and turns results into recommendations.",
-        items: ["Classification", "Regression", "Forecasting", "SHAP explainability"]
+    const data = {
+      profile: {
+        name: "Darcy Awah Achunguh",
+        location: "North York, Ontario, Canada",
+        email: "awahdarcy@gmail.com",
+        phone: "(647) 808-3391",
+        linkedin: "https://www.linkedin.com/in/darcy-awah",
+        portfolio: "https://darcyawah.github.io"
       },
-      "Data Analysis": {
-        title: "Data Analysis",
-        desc: "Transforms business questions into SQL analysis, dashboards, KPI tracking, and clear stakeholder insights.",
-        items: ["SQL analytics", "Power BI", "KPI dashboards", "Business reporting"]
+      stats: [
+        { value: "7+", label: "Years across analytics, BI, banking, insurance & business operations" },
+        { value: "9+", label: "ML model families used across classification and regression projects" },
+        { value: "6", label: "Portfolio projects covering churn, banking, housing, NLP, forecasting & pipelines" },
+        { value: "3", label: "Career paths supported: Data Scientist, Data Analyst & Data Engineer" }
+      ],
+      snapshot: ["Machine Learning", "Predictive Modeling", "SQL Analytics", "Power BI", "Azure ML", "Databricks", "PySpark", "SHAP", "ETL/ELT", "Data Storytelling"],
+      roles: {
+        scientist: {
+          tab: "Data Scientist",
+          title: "Data Scientist",
+          score: 94,
+          summary: "Strong fit for roles requiring predictive modeling, model evaluation, explainability, and business-focused machine learning solutions.",
+          bullets: [
+            "Built classification and regression workflows using Python, Scikit-learn, XGBoost, LightGBM, and neural networks.",
+            "Evaluated models with F1-score, ROC-AUC, PR-AUC, RMSE, R², Adjusted R², MAPE, and cross-validation.",
+            "Used SHAP and feature importance to explain model predictions and connect results to business decisions.",
+            "Delivered end-to-end notebooks from cleaning and EDA through modeling, tuning, interpretation, and recommendations."
+          ],
+          metrics: [
+            { label: "Python/ML", value: 96 }, { label: "Model Evaluation", value: 94 }, { label: "Explainability", value: 92 }, { label: "Feature Engineering", value: 91 }, { label: "Business Impact", value: 90 }
+          ]
+        },
+        analyst: {
+          tab: "Data Analyst",
+          title: "Data Analyst",
+          score: 95,
+          summary: "Strong fit for analytics roles requiring SQL, dashboard reporting, KPI tracking, data validation, and stakeholder-ready insights.",
+          bullets: [
+            "Wrote complex SQL using joins, CTEs, aggregations, subqueries, and window functions for enterprise reporting.",
+            "Built Power BI dashboards and KPI reports to monitor business performance, trends, service issues, and operations.",
+            "Performed source-to-report validation using row counts, field values, business rules, and reporting assumptions.",
+            "Translated technical analysis into clear visuals and recommendations for non-technical stakeholders."
+          ],
+          metrics: [
+            { label: "SQL", value: 96 }, { label: "Power BI", value: 94 }, { label: "Data Validation", value: 92 }, { label: "KPI Reporting", value: 93 }, { label: "Storytelling", value: 91 }
+          ]
+        },
+        engineer: {
+          tab: "Data Engineer",
+          title: "Data Engineer",
+          score: 87,
+          summary: "Solid fit for data engineering-adjacent roles involving ETL/ELT, data validation, SQL pipelines, Databricks, PySpark, and Lakehouse analytics.",
+          bullets: [
+            "Used SQL and Python to extract, clean, transform, validate, and prepare data for reporting and machine learning.",
+            "Designed Databricks, PySpark, Spark SQL, and Delta Lake workflows for dashboard-ready analytics datasets.",
+            "Documented pipeline logic, validation steps, transformation assumptions, and model performance outputs.",
+            "Built reliable model-ready datasets by handling missing values, duplicates, outliers, encoding, scaling, and validation."
+          ],
+          metrics: [
+            { label: "SQL Pipelines", value: 92 }, { label: "ETL/ELT", value: 88 }, { label: "Databricks", value: 84 }, { label: "PySpark", value: 83 }, { label: "Data Quality", value: 91 }
+          ]
+        }
       },
-      "Data Engineering": {
-        title: "Data Engineering",
-        desc: "Prepares reliable datasets through ETL/ELT, data pipelines, validation, PySpark, Databricks, and Lakehouse workflows.",
-        items: ["ETL/ELT", "PySpark", "Databricks", "PostgreSQL"]
-      }
+      skills: [
+        { name: "Python", group: "Programming", level: 95, note: "Pandas, NumPy, Scikit-learn, notebooks, ML workflows" },
+        { name: "SQL", group: "Programming", level: 96, note: "Joins, CTEs, window functions, validation, transformation" },
+        { name: "Pandas & NumPy", group: "Programming", level: 94, note: "Cleaning, EDA, feature engineering, data preparation" },
+        { name: "Jupyter Notebook", group: "Programming", level: 92, note: "Reusable end-to-end analytical notebooks" },
+        { name: "Classification", group: "Machine Learning", level: 94, note: "Logistic Regression, KNN, SVM, Decision Tree, Random Forest, XGBoost, LightGBM" },
+        { name: "Regression", group: "Machine Learning", level: 92, note: "Linear, Ridge, Lasso, tree models, boosting, neural networks" },
+        { name: "Forecasting", group: "Machine Learning", level: 84, note: "Lag variables, rolling averages, seasonality, trend features" },
+        { name: "Model Evaluation", group: "Machine Learning", level: 95, note: "F1, ROC-AUC, PR-AUC, RMSE, R², MAPE, cross-validation" },
+        { name: "SHAP & Explainability", group: "Explainability", level: 91, note: "Feature importance, driver analysis, model interpretation" },
+        { name: "Power BI", group: "Visualization", level: 94, note: "KPI dashboards, executive reporting, stakeholder visuals" },
+        { name: "Tableau", group: "Visualization", level: 80, note: "Dashboarding and visual analysis" },
+        { name: "Matplotlib & Seaborn", group: "Visualization", level: 91, note: "EDA charts, distributions, trend visuals, model outputs" },
+        { name: "Azure Machine Learning", group: "Cloud & Big Data", level: 84, note: "Experimentation, pipelines, model workflows" },
+        { name: "Databricks", group: "Cloud & Big Data", level: 84, note: "Lakehouse analytics, PySpark workflows, Spark SQL" },
+        { name: "PySpark & Spark SQL", group: "Cloud & Big Data", level: 82, note: "Distributed transformations and analytics pipelines" },
+        { name: "PostgreSQL", group: "Data Engineering", level: 88, note: "Relational data, querying, validation, reporting sources" },
+        { name: "ETL/ELT", group: "Data Engineering", level: 88, note: "Ingestion, transformation, validation, dashboard-ready datasets" },
+        { name: "Data Quality", group: "Governance", level: 92, note: "Missing values, duplicates, consistency checks, business rule validation" },
+        { name: "MLflow & MLOps", group: "MLOps", level: 78, note: "Experiment tracking, model monitoring, versioning concepts" },
+        { name: "Stakeholder Communication", group: "Business", level: 93, note: "Requirements gathering, presentation, translating insights" }
+      ],
+      experience: [
+        {
+          company: "Metro College of Technology", location: "Toronto, Ontario", title: "Data Scientist / Data Science and Applications Student", dates: "Nov 2025 – Jul 2026", category: "Education & Projects",
+          stack: ["Python", "SQL", "Scikit-learn", "XGBoost", "LightGBM", "SHAP", "Power BI"],
+          responsibilities: [
+            "Completed applied data science projects covering machine learning, regression, classification, model evaluation, dashboard reporting, and business analytics.",
+            "Built end-to-end machine learning workflows using Python, SQL, Pandas, NumPy, Scikit-learn, XGBoost, LightGBM, and SHAP.",
+            "Cleaned and prepared structured datasets by handling missing values, duplicates, outliers, feature engineering, encoding, scaling, and validation checks.",
+            "Developed and evaluated predictive models using train-test split, K-fold cross-validation, hyperparameter tuning, F1-score, ROC-AUC, RMSE, R², and MAPE.",
+            "Created visual summaries and dashboard-ready reports to communicate trends, model results, key drivers, and recommendations to non-technical audiences.",
+            "Applied SHAP and feature importance methods to explain predictions, improve model interpretability, and support data-driven recommendations."
+          ],
+          achievements: [
+            "Delivered portfolio-ready data science projects aligned with senior data scientist requirements in Python, SQL, machine learning, explainability, and analytics storytelling.",
+            "Built reusable notebooks that run from data preparation through model training, evaluation, interpretation, and final business recommendations."
+          ]
+        },
+        {
+          company: "Sun Life Financial", location: "Toronto, Ontario", title: "Data Scientist / Data Analyst", dates: "Feb 2025 – Apr 2026", category: "Financial Services",
+          stack: ["SQL", "Python", "Excel", "Power BI", "Pandas", "NumPy", "Data Validation"],
+          responsibilities: [
+            "Analyzed financial, operational, and customer datasets using SQL, Python, Excel, and Power BI to support reporting, performance monitoring, and business decision-making.",
+            "Wrote complex SQL queries using joins, CTEs, aggregations, subqueries, and window functions to extract, clean, transform, and validate data from multiple enterprise systems.",
+            "Developed Power BI dashboards and KPI reports to monitor business performance, operational trends, service issues, and key metrics.",
+            "Performed data validation by comparing source-system records, reporting outputs, row counts, field values, and business rules to ensure accuracy and consistency.",
+            "Used Python libraries such as Pandas, NumPy, Matplotlib, and Seaborn for data cleaning, exploratory data analysis, trend analysis, and visualization.",
+            "Supported predictive analytics and machine learning projects by preparing structured datasets, handling missing values, engineering features, and validating model-ready data.",
+            "Collaborated with business teams, data engineers, developers, and stakeholders to gather requirements and translate business questions into analytical solutions.",
+            "Documented data definitions, SQL logic, validation rules, dashboard requirements, and reporting assumptions to improve governance and repeatability."
+          ],
+          achievements: [
+            "Improved reporting efficiency by developing reusable SQL scripts and Power BI dashboards for recurring analytics needs.",
+            "Strengthened data accuracy by implementing validation checks across source systems, reporting layers, and dashboards.",
+            "Improved stakeholder visibility by delivering dashboards that clearly showed business trends, operational performance, and service-level insights.",
+            "Supported better decision-making by transforming raw enterprise data into clean, structured, and meaningful business insights."
+          ]
+        },
+        {
+          company: "USAA Federal Savings Bank", location: "San Antonio, Texas", title: "Data Analyst", dates: "Jan 2023 – Jan 2025", category: "Banking",
+          stack: ["Python", "SQL", "Scikit-learn", "Power BI", "SHAP", "Cross-validation", "PR-AUC"],
+          responsibilities: [
+            "Developed predictive machine learning models using Python, Scikit-learn, and SQL to support customer analytics, risk analysis, reporting, and operational decision-making.",
+            "Built classification and regression models using feature engineering, model training, model testing, model evaluation, and model comparison techniques.",
+            "Used SQL to extract, clean, join, transform, and validate banking and customer datasets from multiple structured data sources.",
+            "Prepared datasets for machine learning by handling missing values, duplicates, outliers, categorical encoding, scaling, and train-test splitting.",
+            "Evaluated models using accuracy, precision, recall, F1-score, ROC-AUC, PR-AUC, MAE, RMSE, R², and cross-validation.",
+            "Applied SHAP and feature importance methods to explain model predictions and identify key drivers behind customer behavior and business outcomes.",
+            "Created Power BI dashboards to communicate KPIs, trends, model results, and analytical findings to business stakeholders.",
+            "Documented model logic, assumptions, data preparation steps, validation results, and analytical findings to support governance and repeatability."
+          ],
+          achievements: [
+            "Reduced manual reporting work by creating reusable SQL queries and dashboard templates for recurring business analysis.",
+            "Improved model transparency by using SHAP-based explainability to show the most important factors influencing predictions.",
+            "Supported improved customer insight by analyzing transaction, account, and customer behavior data to identify trends and risk patterns.",
+            "Increased data reliability by applying structured validation checks before dashboard reporting and machine learning modeling."
+          ]
+        },
+        {
+          company: "Guinness Cameroon S.A.", location: "Cameroon", title: "Data Analyst / Business Intelligence Analyst", dates: "Oct 2019 – Dec 2022", category: "Business Intelligence",
+          stack: ["Power BI", "SQL", "Excel", "Forecasting", "Inventory Analytics", "Sales Analytics"],
+          responsibilities: [
+            "Analyzed sales, distribution, inventory, and customer data to support business performance monitoring, forecasting, and management decision-making.",
+            "Designed and maintained Power BI dashboards to track sales performance, product trends, regional performance, inventory movement, and key business KPIs.",
+            "Used SQL and Excel to clean, transform, validate, and summarize large business datasets for reporting and business analysis.",
+            "Performed exploratory data analysis to identify sales trends, demand patterns, customer behavior, and operational performance gaps.",
+            "Supported forecasting and trend analysis to help business teams understand product performance and demand changes.",
+            "Worked with sales, operations, and management teams to gather reporting requirements and translate them into dashboards, reports, and analytical summaries.",
+            "Conducted data quality checks to identify missing records, duplicate entries, inconsistent values, and reporting discrepancies.",
+            "Created visual reports and presentations to communicate findings clearly to non-technical stakeholders."
+          ],
+          achievements: [
+            "Improved reporting efficiency by replacing manual spreadsheet tracking with structured KPI dashboards.",
+            "Increased visibility into sales and operational performance through dashboard reporting and trend analysis.",
+            "Supported faster business decisions by presenting complex sales and inventory data in clear visual reports.",
+            "Improved data quality by identifying duplicate records, missing values, and inconsistent reporting fields."
+          ]
+        }
+      ],
+      projects: [
+        { title: "Customer Churn Prediction and Retention Analytics", type: "Classification", focus: "Machine Learning", summary: "Built a churn model to identify customers at risk and support targeted retention strategies.", details: ["Performed data cleaning, EDA, feature engineering, encoding, scaling, and model evaluation.", "Compared models using accuracy, precision, recall, F1-score, ROC-AUC, and PR-AUC.", "Applied SHAP explainability to identify top customer behavior drivers influencing churn risk.", "Developed business recommendations to support customer retention and targeted intervention strategies."], tools: ["Python", "Pandas", "NumPy", "Scikit-learn", "Random Forest", "XGBoost", "LightGBM", "SHAP", "Matplotlib", "Seaborn"] },
+        { title: "Bank Marketing Response Prediction Using Machine Learning", type: "Classification", focus: "Machine Learning", summary: "Predicted whether customers would subscribe to a term deposit using campaign and customer profile data.", details: ["Built and compared Logistic Regression, KNN, Decision Tree, Random Forest, AdaBoost, XGBoost, LightGBM, SVM, and Neural Network models.", "Applied cross-validation, hyperparameter tuning, threshold optimization, and model evaluation.", "Used F1-score, ROC-AUC, PR-AUC, and confusion matrix to evaluate performance.", "Conducted univariate analysis, bivariate analysis, hypothesis testing, outlier detection, and class imbalance handling."], tools: ["Python", "SQL", "Pandas", "NumPy", "Scikit-learn", "XGBoost", "LightGBM", "TensorFlow/Keras", "SHAP"] },
+        { title: "House Price Prediction with Regression and Explainable AI", type: "Regression", focus: "Machine Learning", summary: "Built regression models to predict house prices using structured housing data and explainable AI.", details: ["Compared Linear Regression, Ridge, Lasso, KNN, SVR, Decision Tree, Random Forest, AdaBoost, XGBoost, LightGBM, and Neural Network models.", "Applied missing value treatment, outlier handling, log transformation, feature scaling, and categorical encoding.", "Evaluated using MAE, MSE, RMSE, R², Adjusted R², MAPE, and cross-validation scores.", "Used SHAP and feature importance to explain main drivers of house price predictions."], tools: ["Python", "Pandas", "NumPy", "Scikit-learn", "XGBoost", "LightGBM", "SHAP", "Matplotlib", "Seaborn"] },
+        { title: "Databricks Lakehouse Analytics and PySpark Data Pipeline", type: "Data Pipeline", focus: "Data Engineering", summary: "Designed scalable analytics workflow using Databricks, PySpark, Spark SQL, and Lakehouse architecture principles.", details: ["Built data ingestion, transformation, cleaning, and modeling workflows for structured datasets.", "Applied Spark-based processing to prepare large datasets for analytics, machine learning, and reporting.", "Developed dashboard-ready datasets to communicate trends, KPIs, and model results.", "Documented pipeline logic, validation steps, transformation assumptions, and model performance outputs."], tools: ["Databricks", "PySpark", "Spark SQL", "Python", "SQL", "Delta Lake", "Power BI"] },
+        { title: "Health Analytics and Model Explainability with SHAP", type: "Explainability", focus: "Machine Learning", summary: "Built a predictive health analytics workflow with risk-driver interpretation and non-technical communication.", details: ["Cleaned and validated health-related and behavioral data while preventing leakage.", "Trained and compared Logistic Regression, Random Forest, XGBoost, and LightGBM models.", "Evaluated models using precision, recall, F1-score, ROC-AUC, and cross-validation.", "Applied SHAP to identify key risk drivers and communicate assumptions and limitations."], tools: ["Python", "Pandas", "NumPy", "Scikit-learn", "XGBoost", "LightGBM", "SHAP", "Matplotlib", "Seaborn"] },
+        { title: "NLP Text Classification and Sentiment Analysis Project", type: "NLP", focus: "Analytics", summary: "Classified customer feedback and support messages into categories and sentiment groups.", details: ["Preprocessed unstructured text using cleaning, tokenization, stop-word removal, TF-IDF vectorization, and train-test validation.", "Trained and evaluated Logistic Regression, Naive Bayes, Random Forest, and XGBoost classifiers.", "Used accuracy, precision, recall, F1-score, and confusion matrix for evaluation.", "Created visual summaries of sentiment trends, recurring themes, and recommended actions."], tools: ["Python", "Pandas", "Scikit-learn", "NLTK", "TF-IDF", "XGBoost", "Matplotlib", "Seaborn", "Power BI"] },
+        { title: "Time-Series Forecasting for Sales or Demand Prediction", type: "Forecasting", focus: "Analytics", summary: "Predicted sales and demand trends using historical time-based data and ML forecasting methods.", details: ["Engineered lag variables, rolling averages, seasonality indicators, trend variables, and date-based features.", "Compared baseline forecasting methods with Random Forest, XGBoost, and LightGBM.", "Evaluated forecasts using MAE, RMSE, MAPE, and visual backtesting.", "Presented forecast insights through dashboard-ready summaries."], tools: ["Python", "Pandas", "NumPy", "Scikit-learn", "Statsmodels", "XGBoost", "LightGBM", "Matplotlib", "Seaborn", "Power BI"] }
+      ],
+      workflow: [
+        { step: "01", title: "Understand", text: "Clarify the business problem, success metrics, users, risk, and reporting needs before touching the data." },
+        { step: "02", title: "Prepare", text: "Collect, clean, validate, deduplicate, transform, and document datasets using SQL and Python." },
+        { step: "03", title: "Explore", text: "Use univariate and bivariate analysis, visualizations, hypothesis tests, and correlation checks to find patterns." },
+        { step: "04", title: "Model", text: "Train classification, regression, forecasting, and NLP models with cross-validation and tuning." },
+        { step: "05", title: "Explain", text: "Interpret model behavior using SHAP, feature importance, confusion matrices, and stakeholder-friendly narratives." },
+        { step: "06", title: "Deliver", text: "Publish dashboards, recommendations, reusable notebooks, validation rules, and documentation for repeatable decisions." }
+      ],
+      education: [
+        { school: "Metro College of Technology", degree: "Advanced Diploma in Data Science and Applications", date: "Nov 2025 – Jul 2026", location: "Toronto, Ontario" },
+        { school: "Siam University", degree: "Master’s in Business Administration", date: "Aug 2017 – Jun 2019", location: "Bangkok, Thailand" },
+        { school: "University of Buea", degree: "Bachelor’s in Economics", date: "Oct 2009 – Jun 2012", location: "Buea, Cameroon" }
+      ],
+      certifications: ["Data Science and Applications", "Machine Learning with Python", "SQL for Data Analysis", "Power BI Dashboard Development", "Azure Machine Learning", "Databricks and PySpark Fundamentals", "Model Explainability with SHAP", "Data Visualization and Business Intelligence"]
     };
 
-    const tooltip = document.getElementById("tooltip");
+    const roleKeywords = {
+      scientist: ["Predictive modeling", "Model evaluation", "SHAP", "Python", "Feature engineering", "XGBoost", "LightGBM"],
+      analyst: ["SQL analytics", "Power BI", "KPI dashboards", "Data validation", "Stakeholder insights", "Business reporting"],
+      engineer: ["ETL/ELT", "Databricks", "PySpark", "Spark SQL", "PostgreSQL", "Data quality", "Lakehouse"]
+    };
 
-    function showTip(e, text) {
-      tooltip.textContent = text;
-      tooltip.style.left = e.clientX + "px";
-      tooltip.style.top = e.clientY + "px";
-      tooltip.style.opacity = 1;
+    const domainNarratives = {
+      "Programming": "Core hands-on toolkit for cleaning, transforming, exploring, modeling, and validating structured datasets.",
+      "Machine Learning": "Applied model-building strength across classification, regression, forecasting, tuning, and evaluation.",
+      "Explainability": "Ability to translate model behavior into business-readable drivers using SHAP, LIME, and feature importance.",
+      "Visualization": "Dashboard and storytelling capability for KPI reporting, executive views, trend analysis, and model communication.",
+      "Cloud & Big Data": "Scalable analytics exposure using Azure Machine Learning, Databricks, PySpark, Spark SQL, and Lakehouse workflows.",
+      "Data Engineering": "Pipeline-focused foundation for SQL transformation, ETL/ELT, validation, and dashboard-ready datasets.",
+      "Governance": "Strong emphasis on data quality, documentation, repeatability, business rules, and reliable reporting outputs.",
+      "MLOps": "Foundational model operations knowledge covering MLflow, monitoring, versioning, drift concepts, and automation.",
+      "Business": "Stakeholder-facing strength in requirements gathering, communication, presentation, and practical recommendations."
+    };
+
+    const $ = (sel, root = document) => root.querySelector(sel);
+    const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+    let activeRole = 'scientist';
+    let activeSkillGroup = 'All';
+    let activeProjectFocus = 'All';
+    let query = '';
+
+    function escapeHTML(str) { return String(str).replace(/[&<>'"]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[s])); }
+    function showToast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 1700); }
+    function contains(itemText) { return !query || itemText.toLowerCase().includes(query.toLowerCase()); }
+
+    function setupNav() {
+      const links = $$('#desktopNav a');
+      $('#mobileNav').innerHTML = links.map(a => `<a href="${a.getAttribute('href')}">${a.textContent}</a>`).join('');
+      $('#menuToggle').addEventListener('click', () => $('#mobileNav').classList.toggle('open'));
+      $$('#mobileNav a').forEach(a => a.addEventListener('click', () => $('#mobileNav').classList.remove('open')));
+      const sections = links.map(a => $(a.getAttribute('href'))).filter(Boolean);
+      window.addEventListener('scroll', () => {
+        let current = 'home';
+        for (const section of sections) if (scrollY >= section.offsetTop - 150) current = section.id;
+        links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+      }, { passive: true });
     }
 
-    function hideTip() {
-      tooltip.style.opacity = 0;
+    function renderHero() {
+      $('#heroStats').innerHTML = data.stats.map(s => `<div class="stat-card"><b>${s.value}</b><span>${s.label}</span></div>`).join('');
+      $('#snapshotTags').innerHTML = data.snapshot.map(s => `<span class="tool-tag">${s}</span>`).join('');
+      const tabs = Object.entries(data.roles).map(([key, role]) => `<button class="${key === activeRole ? 'active' : ''}" data-role="${key}" role="tab">${role.tab}</button>`).join('');
+      $('#roleTabs').innerHTML = tabs;
+      $$('#roleTabs button').forEach(btn => btn.addEventListener('click', () => setRole(btn.dataset.role)));
+      renderProfileIntelligence();
     }
 
-    function setupReveal() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: .12 });
-      document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    function renderProfileIntelligence() {
+      const r = data.roles[activeRole];
+      const metrics = [...r.metrics].sort((a, b) => b.value - a.value);
+      const avg = Math.round(r.metrics.reduce((sum, m) => sum + m.value, 0) / r.metrics.length);
+      const top = metrics.slice(0, 3);
+      const keywordList = roleKeywords[activeRole] || [];
+      $('#profileSignal').innerHTML = `<div><strong>${r.title} focus activated</strong><br><span>${r.summary}</span></div><span>${avg}% overall fit</span>`;
+      $('#profileIntel').innerHTML = [
+        { label: 'Top capability', value: top[0].value + '%', text: top[0].label },
+        { label: 'Second strength', value: top[1].value + '%', text: top[1].label },
+        { label: 'Career alignment', value: r.score + '%', text: r.title }
+      ].map(item => `<div class="intel-card"><small>${item.label}</small><strong>${item.text}</strong><span>${item.value}</span></div>`).join('');
+      $('#profileKeywords').innerHTML = keywordList.map(k => `<span class="keyword-pill">${k}</span>`).join('');
     }
 
-    function animateMetrics() {
-      document.querySelectorAll(".metric-value").forEach(el => {
-        const target = Number(el.dataset.target);
-        const display = el.dataset.display;
-        let start = null;
-        function step(ts) {
-          if (!start) start = ts;
-          const p = Math.min((ts - start) / 950, 1);
-          const eased = 1 - Math.pow(1 - p, 3);
-          el.textContent = Math.round(target * eased);
-          if (p < 1) {
-            requestAnimationFrame(step);
-          } else {
-            el.textContent = display;
-          }
-        }
-        requestAnimationFrame(step);
-      });
+    function setRole(key) {
+      activeRole = key;
+      $$('#roleTabs button').forEach(b => b.classList.toggle('active', b.dataset.role === key));
+      renderRole();
+      drawRoleBar();
+      drawHeroRadar();
+      renderProfileIntelligence();
+      highlightRoleSkills();
     }
 
-    function setupTheme() {
-      const btn = document.getElementById("themeBtn");
-      btn.addEventListener("click", () => {
-        const body = document.body;
-        const next = body.dataset.theme === "dark" ? "light" : "dark";
-        body.dataset.theme = next;
-        btn.textContent = next === "dark" ? "☾" : "☀";
-      });
-    }
-
-    function setupHeroTabs() {
-      const tabs = document.querySelectorAll(".role-tab");
-      const panel = document.getElementById("rolePanel");
-      tabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-          tabs.forEach(t => t.classList.remove("active"));
-          tab.classList.add("active");
-          const data = roleContent[tab.dataset.role];
-          panel.innerHTML = `
-            <h3>${data.title}</h3>
-            <p>${data.desc}</p>
-            <ul>${data.items.map(i => `<li>${i}</li>`).join("")}</ul>
-          `;
-          updateFocusSummary(tab.dataset.role);
-        });
-      });
-    }
-
-    function updateFocusSummary(role="Data Science") {
-      const box = document.getElementById("focusSummary");
-      const d = roleContent[role];
-      box.innerHTML = `
-        <div class="role-panel">
-          <h3>${d.title} focus</h3>
-          <p>${d.desc}</p>
-          <ul>${d.items.map(i => `<li>${i}</li>`).join("")}</ul>
+    function renderRole() {
+      const r = data.roles[activeRole];
+      $('#roleCard').innerHTML = `
+        <div class="eyebrow">Selected focus</div>
+        <h3>${r.title}</h3>
+        <p>${r.summary}</p>
+        <div class="role-score">
+          <div><strong class="muted">Portfolio alignment score</strong><p style="margin:8px 0 0">Based on resume skills, projects, and experience positioning.</p></div>
+          <div class="score-ring" style="--score:${r.score}"><b>${r.score}%</b></div>
         </div>
-      `;
+        <ul class="role-list">${r.bullets.map(b => `<li>${b}</li>`).join('')}</ul>`;
+      $('#roleChartLabel').textContent = r.title;
     }
 
-    function renderBarChart(id, data, labelKey, valueKey, suffix="", max=100) {
-      const el = document.getElementById(id);
-      const width = el.clientWidth || 560;
-      const height = 330;
-      const margin = { top: 18, right: 22, bottom: 72, left: 48 };
-      const innerW = width - margin.left - margin.right;
-      const innerH = height - margin.top - margin.bottom;
-      const actualMax = max || Math.max(...data.map(d => d[valueKey]));
-      const step = innerW / data.length;
-      const barW = Math.max(24, step * .62);
+    function renderSkills() {
+      const groups = ['All', ...new Set(data.skills.map(s => s.group))];
+      $('#skillFilters').innerHTML = groups.map(g => `<button class="chip ${g === activeSkillGroup ? 'active' : ''}" data-group="${g}">${g}</button>`).join('');
+      $$('#skillFilters button').forEach(btn => btn.addEventListener('click', () => { activeSkillGroup = btn.dataset.group; renderSkills(); drawSkillRadar(); }));
+      const filtered = data.skills.filter(s => (activeSkillGroup === 'All' || s.group === activeSkillGroup) && contains([s.name, s.group, s.note].join(' ')));
+      $('#skillGrid').innerHTML = filtered.map(s => `
+        <article class="skill-card" data-skill="${s.name.toLowerCase()} ${s.group.toLowerCase()}">
+          <div class="skill-top"><strong>${s.name}</strong><span>${s.level}%</span></div>
+          <div class="meter"><i style="--w:${s.level}%"></i></div>
+          <small>${s.note}</small>
+        </article>`).join('') || `<div class="panel"><p>No skills match the current search.</p></div>`;
+      const tools = data.skills.filter(s => s.level >= 88).map(s => s.name).slice(0, 16);
+      $('#toolCloud').innerHTML = tools.map(t => `<span class="tool-tag">${t}</span>`).join('');
+      renderDomainInsights();
+      highlightRoleSkills();
+    }
 
-      const bars = data.map((d, i) => {
-        const x = margin.left + i * step + (step - barW) / 2;
-        const h = (d[valueKey] / actualMax) * innerH;
-        const y = margin.top + innerH - h;
-        const label = d[labelKey];
-        return `
-          <g>
-            <rect class="bar" x="${x}" y="${y}" width="${barW}" height="${h}" rx="11"
-              data-label="${label}" data-value="${d[valueKey]}"></rect>
-            <text x="${x + barW/2}" y="${y - 9}" text-anchor="middle" class="chart-value">${d[valueKey]}${suffix}</text>
-            <text x="${x + barW/2}" y="${margin.top + innerH + 22}" text-anchor="end"
-              transform="rotate(-32 ${x + barW/2} ${margin.top + innerH + 22})" class="chart-label">${label}</text>
-          </g>
-        `;
-      }).join("");
+    function renderDomainInsights() {
+      const groups = [...new Set(data.skills.map(s => s.group))];
+      const summaries = groups.map(group => {
+        const rows = data.skills.filter(s => s.group === group);
+        const avg = Math.round(rows.reduce((sum, s) => sum + s.level, 0) / rows.length);
+        const topSkills = [...rows].sort((a, b) => b.level - a.level).slice(0, 3).map(s => s.name);
+        return { group, rows, avg, topSkills };
+      }).sort((a, b) => b.avg - a.avg);
 
-      el.innerHTML = `
-        <svg viewBox="0 0 ${width} ${height}" role="img">
-          <defs>
-            <linearGradient id="${id}Gradient" x1="0" x2="1">
-              <stop offset="0%" stop-color="#57f7d3"></stop>
-              <stop offset="100%" stop-color="#8fa7ff"></stop>
-            </linearGradient>
-          </defs>
-          <line x1="${margin.left}" y1="${margin.top + innerH}" x2="${margin.left + innerW}" y2="${margin.top + innerH}" stroke="rgba(255,255,255,.18)"></line>
-          <line x1="${margin.left}" y1="${margin.top}" x2="${margin.left}" y2="${margin.top + innerH}" stroke="rgba(255,255,255,.18)"></line>
-          ${bars}
-        </svg>
-      `;
+      $('#domainInsights').innerHTML = summaries.map(d => `
+        <button class="domain-card ${activeSkillGroup === d.group ? 'active' : ''}" data-group="${d.group}" type="button" title="Show ${d.group} skills">
+          <div class="domain-head"><strong>${d.group}</strong><span>${d.avg}%</span></div>
+          <div class="domain-meta">${d.rows.length} skills · strongest: ${d.topSkills.join(', ')}</div>
+          <div class="domain-meter"><i style="--w:${d.avg}%"></i></div>
+        </button>`).join('');
 
-      el.querySelectorAll(".bar").forEach(b => {
-        b.setAttribute("fill", `url(#${id}Gradient)`);
-        b.style.cursor = "pointer";
-        b.addEventListener("mousemove", e => showTip(e, `${b.dataset.label}: ${b.dataset.value}${suffix}`));
-        b.addEventListener("mouseleave", hideTip);
-      });
-      el.querySelectorAll(".chart-label").forEach(t => {
-        t.setAttribute("fill", "currentColor");
-        t.style.color = "var(--muted)";
-        t.style.fontSize = "11px";
-      });
-      el.querySelectorAll(".chart-value").forEach(t => {
-        t.setAttribute("fill", "currentColor");
-        t.style.color = "var(--text)";
-        t.style.fontSize = "12px";
-        t.style.fontWeight = "900";
+      $$('#domainInsights .domain-card').forEach(card => card.addEventListener('click', () => {
+        activeSkillGroup = card.dataset.group;
+        renderSkills();
+        drawSkillRadar();
+      }));
+
+      const selected = activeSkillGroup === 'All' ? summaries[0] : summaries.find(d => d.group === activeSkillGroup) || summaries[0];
+      $('#domainDetail').innerHTML = `
+        <h4>${selected.group} depth</h4>
+        <p>${domainNarratives[selected.group] || 'A focused skill cluster supporting data science, analytics, and engineering delivery.'}</p>
+        <div class="domain-tags">${selected.topSkills.map(skill => `<span class="keyword-pill">${skill}</span>`).join('')}</div>`;
+    }
+
+    function highlightRoleSkills() {
+      const roleTerms = {
+        scientist: ['python','classification','regression','model','shap','explainability','forecasting','evaluation'],
+        analyst: ['sql','power bi','tableau','visualization','stakeholder','quality','validation'],
+        engineer: ['sql','etl','databricks','pyspark','spark','postgresql','quality','mlflow']
+      }[activeRole];
+      $$('.skill-card').forEach(card => {
+        const text = card.dataset.skill || '';
+        const match = roleTerms.some(t => text.includes(t));
+        card.classList.toggle('dimmed', !match && activeSkillGroup === 'All' && !query);
       });
     }
 
-    function renderDonut(id, data, labelKey, valueKey) {
-      const el = document.getElementById(id);
-      const width = el.clientWidth || 480;
-      const height = 330;
-      const cx = width / 2;
-      const cy = 142;
-      const r = 96;
-      const total = data.reduce((s,d) => s + d[valueKey], 0);
-      const colors = ["#57f7d3", "#8fa7ff", "#f9ce6d", "#ff7da9", "#b8ff7a", "#b591ff"];
-      let angle = -90;
+    function renderExperience() {
+      const filtered = data.experience.filter(e => contains([e.company, e.title, e.location, e.category, e.stack.join(' '), e.responsibilities.join(' '), e.achievements.join(' ')].join(' ')));
+      $('#experienceTimeline').innerHTML = filtered.map((e, i) => `
+        <article class="timeline-item ${i < 2 ? 'open' : ''}">
+          <button class="timeline-btn" aria-expanded="${i < 2}">
+            <div class="timeline-title"><div><strong>${e.title}</strong><div class="timeline-meta">${e.company} · ${e.location} · ${e.dates}</div></div><span class="expand">${i < 2 ? '−' : '+'}</span></div>
+          </button>
+          <div class="timeline-content">
+            <div class="split-list">
+              <div><h4>Responsibilities</h4><ul class="clean-list">${e.responsibilities.map(r => `<li>${r}</li>`).join('')}</ul></div>
+              <div><h4>Key achievements</h4><ul class="clean-list">${e.achievements.map(a => `<li>${a}</li>`).join('')}</ul></div>
+            </div>
+            <div class="stack-row">${e.stack.map(s => `<span class="mini-tag">${s}</span>`).join('')}</div>
+          </div>
+        </article>`).join('') || `<div class="panel"><p>No experience entries match the current search.</p></div>`;
+      $$('.timeline-btn').forEach(btn => btn.addEventListener('click', () => {
+        const item = btn.closest('.timeline-item');
+        const open = item.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(open));
+        $('.expand', btn).textContent = open ? '−' : '+';
+      }));
+    }
 
-      function polar(a) {
-        const rad = a * Math.PI / 180;
-        return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
+    function renderProjects() {
+      const focuses = ['All', ...new Set(data.projects.map(p => p.focus))];
+      $('#projectFilters').innerHTML = focuses.map(f => `<button class="chip ${f === activeProjectFocus ? 'active' : ''}" data-focus="${f}">${f}</button>`).join('');
+      $$('#projectFilters button').forEach(btn => btn.addEventListener('click', () => { activeProjectFocus = btn.dataset.focus; renderProjects(); }));
+      const filtered = data.projects.filter(p => (activeProjectFocus === 'All' || p.focus === activeProjectFocus) && contains([p.title, p.type, p.focus, p.summary, p.details.join(' '), p.tools.join(' ')].join(' ')));
+      $('#projectCount').textContent = `${filtered.length} project${filtered.length === 1 ? '' : 's'} shown`;
+      $('#projectGrid').innerHTML = filtered.map((p, i) => `
+        <article class="project-card">
+          <span class="project-type">${p.type}</span>
+          <h3>${p.title}</h3>
+          <p>${p.summary}</p>
+          <div class="stack-row">${p.tools.slice(0,5).map(t => `<span class="mini-tag">${t}</span>`).join('')}</div>
+          <div class="project-actions"><span class="muted">${p.focus}</span><button class="text-btn" data-project="${data.projects.indexOf(p)}">View details →</button></div>
+        </article>`).join('') || `<div class="panel"><p>No projects match the current filter.</p></div>`;
+      $$('#projectGrid .text-btn').forEach(btn => btn.addEventListener('click', () => openProject(Number(btn.dataset.project))));
+    }
+
+    function openProject(index) {
+      const p = data.projects[index];
+      $('#modalType').textContent = `${p.focus} · ${p.type}`;
+      $('#modalTitle').textContent = p.title;
+      $('#modalBody').innerHTML = `<p class="lead">${p.summary}</p><h3>Project highlights</h3><ul class="clean-list">${p.details.map(d => `<li>${d}</li>`).join('')}</ul><h3 style="margin-top:18px">Tools</h3><div class="tool-cloud">${p.tools.map(t => `<span class="tool-tag">${t}</span>`).join('')}</div>`;
+      $('#projectModal').classList.add('open');
+      $('#projectModal').setAttribute('aria-hidden','false');
+    }
+
+    function renderWorkflow() {
+      $('#workflowGrid').innerHTML = data.workflow.map((w, i) => `<article class="workflow-step ${i === 0 ? 'active' : ''}" data-step="${i}"><div class="step-num">${w.step}</div><h3>${w.title}</h3><p>${w.text}</p></article>`).join('');
+      function setStep(i) {
+        $$('.workflow-step').forEach((el, idx) => el.classList.toggle('active', idx === i));
+        const w = data.workflow[i];
+        $('#workflowDetail').innerHTML = `<div class="eyebrow">Workflow detail</div><h3>${w.step}. ${w.title}</h3><p>${w.text}</p>`;
       }
-
-      const paths = data.map((d,i) => {
-        const part = (d[valueKey] / total) * 360;
-        const start = polar(angle);
-        const end = polar(angle + part);
-        const large = part > 180 ? 1 : 0;
-        const path = `M ${start.x} ${start.y} A ${r} ${r} 0 ${large} 1 ${end.x} ${end.y}`;
-        angle += part;
-        const pct = Math.round((d[valueKey] / total) * 100);
-        return `<path d="${path}" fill="none" stroke="${colors[i % colors.length]}" stroke-width="34" stroke-linecap="round"
-          data-label="${d[labelKey]}" data-value="${d[valueKey]}" data-pct="${pct}"></path>`;
-      }).join("");
-
-      const legend = data.map((d,i) => `
-        <div style="display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.88rem;">
-          <span style="width:11px;height:11px;border-radius:50%;display:inline-block;background:${colors[i % colors.length]};"></span>
-          <span>${d[labelKey]} · ${d[valueKey]}</span>
-        </div>
-      `).join("");
-
-      el.innerHTML = `
-        <svg viewBox="0 0 ${width} ${height}" role="img">
-          <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="rgba(255,255,255,.09)" stroke-width="34"></circle>
-          ${paths}
-          <text x="${cx}" y="${cy - 6}" text-anchor="middle" class="donut-total">${total}</text>
-          <text x="${cx}" y="${cy + 22}" text-anchor="middle" class="donut-sub">projects</text>
-        </svg>
-        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:-10px;">${legend}</div>
-      `;
-      el.querySelectorAll("path").forEach(p => {
-        p.style.cursor = "pointer";
-        p.addEventListener("mousemove", e => showTip(e, `${p.dataset.label}: ${p.dataset.value} project(s), ${p.dataset.pct}%`));
-        p.addEventListener("mouseleave", hideTip);
-      });
-      const totalText = el.querySelector(".donut-total");
-      totalText.setAttribute("fill", "currentColor");
-      totalText.style.color = "var(--text)";
-      totalText.style.fontSize = "44px";
-      totalText.style.fontWeight = "950";
-      const subText = el.querySelector(".donut-sub");
-      subText.setAttribute("fill", "currentColor");
-      subText.style.color = "var(--muted)";
-      subText.style.fontSize = "13px";
+      $$('.workflow-step').forEach((el, i) => el.addEventListener('click', () => setStep(i)));
+      setStep(0);
     }
 
-    function setupSkills() {
-      const buttons = document.querySelectorAll("[data-skill-filter]");
-      const cards = document.querySelectorAll("[data-skill-category]");
-      buttons.forEach(btn => {
-        btn.addEventListener("click", () => {
-          buttons.forEach(b => b.classList.remove("active"));
-          btn.classList.add("active");
-          const filter = btn.dataset.skillFilter;
-          cards.forEach(card => card.classList.toggle("hidden", filter !== "all" && card.dataset.skillCategory !== filter));
-        });
-      });
-      document.querySelectorAll(".chip").forEach(chip => {
-        chip.addEventListener("click", () => chip.classList.toggle("active"));
-      });
+    function renderEducation() {
+      $('#educationList').innerHTML = data.education.map(e => `<div style="padding:14px 0; border-bottom:1px solid var(--line)"><strong>${e.school}</strong><div class="muted">${e.degree}</div><div class="timeline-meta">${e.location} · ${e.date}</div></div>`).join('');
+      $('#certGrid').innerHTML = data.certifications.map(c => `<span class="cert">${c}</span>`).join('');
     }
 
-    function setupTimeline() {
-      document.querySelectorAll(".timeline-item").forEach(item => {
-        const btn = item.querySelector(".timeline-main");
-        btn.addEventListener("click", () => {
-          item.classList.toggle("open");
-          btn.setAttribute("aria-expanded", item.classList.contains("open") ? "true" : "false");
-        });
-      });
+    function renderCommandResults(term = '') {
+      const rows = [];
+      data.skills.forEach(s => rows.push({ title: s.name, type: `Skill · ${s.group}`, target: '#skills', text: [s.name, s.group, s.note].join(' ') }));
+      data.projects.forEach(p => rows.push({ title: p.title, type: `Project · ${p.focus}`, target: '#projects', text: [p.title, p.type, p.focus, p.summary, p.tools.join(' ')].join(' ') }));
+      data.experience.forEach(e => rows.push({ title: `${e.title} at ${e.company}`, type: `Experience · ${e.dates}`, target: '#experience', text: [e.title, e.company, e.stack.join(' '), e.responsibilities.join(' ')].join(' ') }));
+      const matches = rows.filter(r => !term || r.text.toLowerCase().includes(term.toLowerCase()) || r.title.toLowerCase().includes(term.toLowerCase())).slice(0, 10);
+      $('#commandResults').innerHTML = matches.map(r => `<div class="command-item" data-target="${r.target}"><strong>${escapeHTML(r.title)}</strong><small>${escapeHTML(r.type)}</small></div>`).join('') || `<p>No matches found.</p>`;
+      $$('.command-item').forEach(item => item.addEventListener('click', () => { $('#commandPalette').classList.remove('open'); location.hash = item.dataset.target; }));
     }
 
-    function setupProjects() {
-      const search = document.getElementById("projectSearch");
-      const track = document.getElementById("trackFilter");
-      const type = document.getElementById("typeFilter");
-      const cards = document.querySelectorAll(".project-card");
-
-      function apply() {
-        const q = search.value.trim().toLowerCase();
-        const selectedTrack = track.value;
-        const selectedType = type.value;
-
-        cards.forEach(card => {
-          const textMatch = !q || card.dataset.search.includes(q);
-          const trackMatch = selectedTrack === "all" || card.dataset.track === selectedTrack;
-          const typeMatch = selectedType === "all" || card.dataset.type === selectedType;
-          card.classList.toggle("hidden", !(textMatch && trackMatch && typeMatch));
+    function drawRadar(canvasId, labels, values, opts = {}) {
+      const canvas = $(canvasId); if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = Math.max(320, rect.width) * dpr; canvas.height = (opts.height || rect.height || 330) * dpr;
+      ctx.scale(dpr, dpr);
+      const w = canvas.width / dpr, h = canvas.height / dpr;
+      ctx.clearRect(0,0,w,h);
+      const cx = w/2, cy = h/2 + (opts.yOffset || 8), radius = Math.min(w,h) * (opts.radius || .33);
+      const styles = getComputedStyle(document.body);
+      const palette = opts.palette || [styles.getPropertyValue('--viz-primary').trim(), styles.getPropertyValue('--viz-secondary').trim(), styles.getPropertyValue('--viz-tertiary').trim()];
+      const muted = styles.getPropertyValue('--muted').trim();
+      const text = styles.getPropertyValue('--text').trim();
+      const gridLine = styles.getPropertyValue('--viz-stroke').trim() || styles.getPropertyValue('--line').trim();
+      ctx.lineWidth = 1;
+      for (let ring=1; ring<=4; ring++) {
+        ctx.beginPath();
+        labels.forEach((_, i) => {
+          const a = -Math.PI/2 + i * 2*Math.PI/labels.length;
+          const r = radius * ring / 4;
+          const x = cx + Math.cos(a)*r, y = cy + Math.sin(a)*r;
+          i ? ctx.lineTo(x,y) : ctx.moveTo(x,y);
         });
+        ctx.closePath(); ctx.strokeStyle = gridLine; ctx.stroke();
       }
-
-      [search, track, type].forEach(el => el.addEventListener("input", apply));
-      [track, type].forEach(el => el.addEventListener("change", apply));
+      labels.forEach((lab, i) => {
+        const a = -Math.PI/2 + i * 2*Math.PI/labels.length;
+        ctx.beginPath(); ctx.moveTo(cx,cy); ctx.lineTo(cx+Math.cos(a)*radius, cy+Math.sin(a)*radius); ctx.strokeStyle = gridLine; ctx.stroke();
+        ctx.fillStyle = muted; ctx.font = '700 12px Inter, sans-serif'; ctx.textAlign = Math.cos(a) > .25 ? 'left' : Math.cos(a) < -.25 ? 'right' : 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText(lab, cx+Math.cos(a)*(radius+34), cy+Math.sin(a)*(radius+28));
+      });
+      const grad = ctx.createLinearGradient(cx-radius, cy-radius, cx+radius, cy+radius);
+      grad.addColorStop(0, palette[0]); grad.addColorStop(.55, palette[1]); grad.addColorStop(1, palette[2] || palette[1]);
+      ctx.beginPath();
+      values.forEach((v, i) => {
+        const a = -Math.PI/2 + i * 2*Math.PI/labels.length; const r = radius * v / 100; const x = cx + Math.cos(a)*r, y = cy + Math.sin(a)*r;
+        i ? ctx.lineTo(x,y) : ctx.moveTo(x,y);
+      });
+      ctx.closePath();
+      ctx.save(); ctx.globalAlpha = .20; ctx.fillStyle = grad; ctx.fill(); ctx.restore();
+      ctx.save(); ctx.shadowColor = palette[0]; ctx.shadowBlur = 12; ctx.strokeStyle = grad; ctx.lineWidth = 3; ctx.stroke(); ctx.restore();
+      values.forEach((v, i) => {
+        const a = -Math.PI/2 + i * 2*Math.PI/labels.length; const r = radius * v / 100;
+        const px = cx+Math.cos(a)*r, py = cy+Math.sin(a)*r;
+        ctx.beginPath(); ctx.arc(px, py, 5, 0, Math.PI*2); ctx.fillStyle = palette[i % palette.length]; ctx.fill();
+        ctx.lineWidth = 2; ctx.strokeStyle = document.body.classList.contains('light') ? '#ffffff' : 'rgba(255,255,255,.82)'; ctx.stroke();
+      });
     }
 
-    function renderAllCharts() {
-      renderBarChart("roleBarChart", roleStrengths, "role", "score", "%", 100);
-      renderDonut("projectDonutChart", trackMix, "track", "count");
-      renderBarChart("skillDepthChart", skillCounts, "category", "count", "", null);
+    function drawBar(canvasId, rows, opts = {}) {
+      const canvas = $(canvasId); if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = Math.max(320, rect.width) * dpr; canvas.height = (opts.height || 360) * dpr; ctx.scale(dpr,dpr);
+      const w = canvas.width/dpr, h = canvas.height/dpr; ctx.clearRect(0,0,w,h);
+      const pad = { l: 145, r: 28, t: 24, b: 24 };
+      const accent = getComputedStyle(document.body).getPropertyValue('--accent').trim();
+      const accent2 = getComputedStyle(document.body).getPropertyValue('--accent-2').trim();
+      const muted = getComputedStyle(document.body).getPropertyValue('--muted').trim();
+      const line = getComputedStyle(document.body).getPropertyValue('--line').trim();
+      const text = getComputedStyle(document.body).getPropertyValue('--text').trim();
+      const rowH = (h - pad.t - pad.b) / rows.length;
+      ctx.font = '700 12px Inter, sans-serif';
+      rows.forEach((row, i) => {
+        const y = pad.t + i * rowH + rowH * .24;
+        const maxW = w - pad.l - pad.r;
+        ctx.fillStyle = muted; ctx.textAlign = 'right'; ctx.fillText(row.label, pad.l - 12, y + 12);
+        ctx.fillStyle = line; roundRect(ctx, pad.l, y, maxW, rowH*.42, 8); ctx.fill();
+        const grad = ctx.createLinearGradient(pad.l, y, pad.l+maxW, y); grad.addColorStop(0, accent); grad.addColorStop(1, accent2);
+        ctx.fillStyle = grad; roundRect(ctx, pad.l, y, maxW * row.value / 100, rowH*.42, 8); ctx.fill();
+        ctx.fillStyle = text; ctx.textAlign = 'left'; ctx.fillText(row.value + '%', pad.l + maxW * row.value / 100 + 8, y + 12);
+      });
     }
 
-    window.addEventListener("resize", () => {
-      clearTimeout(window.__chartTimer);
-      window.__chartTimer = setTimeout(renderAllCharts, 150);
-    });
+    function drawDonut(canvasId, rows) {
+      const canvas = $(canvasId); if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const dpr = window.devicePixelRatio || 1; const rect = canvas.getBoundingClientRect();
+      canvas.width = Math.max(320, rect.width)*dpr; canvas.height = 240*dpr; ctx.scale(dpr,dpr);
+      const w=canvas.width/dpr,h=canvas.height/dpr; ctx.clearRect(0,0,w,h);
+      const cx=w*.28, cy=h/2, r=Math.min(w,h)*.31, total=rows.reduce((a,b)=>a+b.value,0);
+      const colors = [getComputedStyle(document.body).getPropertyValue('--accent').trim(), getComputedStyle(document.body).getPropertyValue('--accent-2').trim(), getComputedStyle(document.body).getPropertyValue('--accent-3').trim(), getComputedStyle(document.body).getPropertyValue('--accent-4').trim()];
+      let start=-Math.PI/2;
+      rows.forEach((row,i)=>{ const angle=row.value/total*Math.PI*2; ctx.beginPath(); ctx.arc(cx,cy,r,start,start+angle); ctx.lineWidth=24; ctx.strokeStyle=colors[i%colors.length]; ctx.stroke(); start+=angle; });
+      ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--text').trim(); ctx.font='900 24px Inter, sans-serif'; ctx.textAlign='center'; ctx.fillText('360°',cx,cy-2); ctx.font='700 11px Inter, sans-serif'; ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--muted').trim(); ctx.fillText('DATA',cx,cy+18);
+      rows.forEach((row,i)=>{ const x=w*.55, y=54+i*36; ctx.fillStyle=colors[i%colors.length]; roundRect(ctx,x,y-12,12,12,3); ctx.fill(); ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--text').trim(); ctx.font='800 13px Inter, sans-serif'; ctx.textAlign='left'; ctx.fillText(row.label,x+20,y); ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--muted').trim(); ctx.fillText(row.value+'%',x+170,y); });
+    }
 
-    document.addEventListener("DOMContentLoaded", () => {
-      setupReveal();
-      animateMetrics();
-      setupTheme();
-      setupHeroTabs();
-      setupSkills();
-      setupTimeline();
-      setupProjects();
-      updateFocusSummary("Data Science");
-      renderAllCharts();
-    });
+    function roundRect(ctx, x, y, width, height, radius) {
+      const r = Math.min(radius, height/2, width/2);
+      ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+width,y,x+width,y+height,r); ctx.arcTo(x+width,y+height,x,y+height,r); ctx.arcTo(x,y+height,x,y,r); ctx.arcTo(x,y,x+width,y,r); ctx.closePath();
+    }
+
+    function drawHeroRadar() {
+      const role = data.roles[activeRole];
+      drawRadar('#heroRadar', role.metrics.map(m => m.label), role.metrics.map(m => m.value), { height: 330, radius: .30, palette: ['#2f80ed', '#14b8a6', '#8b5cf6'] });
+    }
+    function drawRoleBar() { drawBar('#roleBar', data.roles[activeRole].metrics); }
+    function drawSkillRadar() {
+      const groups = [...new Set(data.skills.map(s => s.group))];
+      const values = groups.map(g => Math.round(data.skills.filter(s => s.group === g).reduce((a,b)=>a+b.level,0) / data.skills.filter(s => s.group === g).length));
+      drawRadar('#skillRadar', groups.map(g => g.replace('Machine Learning','ML').replace('Cloud & Big Data','Cloud').replace('Data Engineering','Data Eng')), values, { height: 420, radius: .30, palette: ['#2563eb', '#0ea5e9', '#14b8a6'] });
+    }
+    function drawMixChart() { drawDonut('#mixChart', [{label:'Data Science',value:35},{label:'Analytics & BI',value:32},{label:'Data Engineering',value:21},{label:'Governance',value:12}]); }
+    function redrawAllCharts() { drawHeroRadar(); drawRoleBar(); drawSkillRadar(); drawMixChart(); }
+
+    function setupInteractions() {
+      $('#globalSearch').addEventListener('input', e => { query = e.target.value.trim(); renderSkills(); renderExperience(); renderProjects(); });
+      $('#densityToggle').addEventListener('click', () => { document.body.classList.toggle('compact'); $('#densityToggle').textContent = document.body.classList.contains('compact') ? 'Full View' : 'Compact View'; });
+      $('#expandAll').addEventListener('click', () => $$('.timeline-item').forEach(item => { item.classList.add('open'); $('.expand', item).textContent = '−'; }));
+      $('#collapseAll').addEventListener('click', () => $$('.timeline-item').forEach(item => { item.classList.remove('open'); $('.expand', item).textContent = '+'; }));
+      $('#modalClose').addEventListener('click', () => $('#projectModal').classList.remove('open'));
+      $('#projectModal').addEventListener('click', e => { if (e.target.id === 'projectModal') $('#projectModal').classList.remove('open'); });
+      $('#printBtn').addEventListener('click', () => window.print());
+      $('#topBtn').addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
+      $('#copyEmail').addEventListener('click', async () => { try { await navigator.clipboard.writeText(data.profile.email); showToast('Email copied to clipboard'); } catch(e) { location.href = 'mailto:' + data.profile.email; } });
+      const openCommand = () => { $('#commandPalette').classList.add('open'); renderCommandResults(''); setTimeout(() => $('#commandInput').focus(), 40); };
+      $('#commandOpen').addEventListener('click', openCommand); $('#commandOpen2').addEventListener('click', openCommand);
+      $('#commandClose').addEventListener('click', () => $('#commandPalette').classList.remove('open'));
+      $('#commandInput').addEventListener('input', e => renderCommandResults(e.target.value));
+      window.addEventListener('keydown', e => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openCommand(); }
+        if (e.key === 'Escape') { $('#projectModal').classList.remove('open'); $('#commandPalette').classList.remove('open'); }
+      });
+      $('#themeToggle').addEventListener('click', () => { document.body.classList.toggle('light'); localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark'); $('#themeToggle').textContent = document.body.classList.contains('light') ? '☀' : '☾'; setTimeout(redrawAllCharts, 80); });
+      if (localStorage.getItem('theme') === 'light') { document.body.classList.add('light'); $('#themeToggle').textContent = '☀'; }
+      window.addEventListener('resize', () => { clearTimeout(window.__chartTimer); window.__chartTimer = setTimeout(redrawAllCharts, 150); }, { passive: true });
+      document.addEventListener('pointermove', e => { document.body.style.setProperty('--mx', `${e.clientX}px`); document.body.style.setProperty('--my', `${e.clientY}px`); }, { passive: true });
+    }
+
+    function revealOnScroll() {
+      const obs = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }), { threshold: .11 });
+      $$('.reveal').forEach(el => obs.observe(el));
+    }
+
+    function init() {
+      setupNav(); renderHero(); renderRole(); renderSkills(); renderExperience(); renderProjects(); renderWorkflow(); renderEducation(); setupInteractions(); revealOnScroll(); redrawAllCharts(); $('#year').textContent = new Date().getFullYear(); renderCommandResults('');
+    }
+    init();
   </script>
 </body>
 </html>
